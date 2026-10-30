@@ -1,34 +1,23 @@
-# pagic.dev
+<img src="assets/pagic.png" alt="Pagic" width="96" height="96">
 
-The website for [Pagic](https://pagic.dev), a browser extension that recolors,
-declutters and rearranges any website.
+# Pagic
 
-Plain HTML, CSS and JavaScript with no build step. It's hosted on GitHub Pages from
-the root of `main`, so every push goes live.
+**Make the internet yours again.**
 
-## Run locally
+Pagic is a browser extension that lets you recolor, declutter and rearrange any
+website, and remembers it every time you come back.
 
-```sh
-python3 -m http.server 4173
-```
+![Pagic on a Wikipedia article, with sticky notes and the settings panel](assets/shots/wiki-panel-simple.webp)
 
-Then open http://localhost:4173.
+- **Recolor any site:** any colors, dark mode, your own font.
+- **Hide the clutter:** click a sidebar, a banner or the comments, and it's gone for good.
+- **Just read:** Reader turns any article into a clean page.
+- **Notes on any page:** sticky notes and drawings that stay where you put them.
+- **Remembers every site:** your changes are saved per site and come back on every visit.
+- **Stays with you:** no account, and everything stays in your browser.
 
-## Files
+Starts simple, with more one switch away when you want it.
 
-| Path | What it is |
-| --- | --- |
-| `index.html` | The landing page |
-| `privacy.html` | The privacy policy |
-| `styles.css`, `app.js` | Styles, the before/after slider, feature dialogs and the Simple/Advanced switch |
-| `config.js` | The Chrome Web Store link and Umami analytics. While `storeUrl` is empty, the install buttons read "Coming soon to Chrome". Analytics only run on pagic.dev |
-| `assets/icons/` | Clay icons, 512 px WebP. Prompts are in [ICON-PROMPTS.md](ICON-PROMPTS.md) |
-| `assets/shots/` | Screenshots of Pagic, 1600 × 1000 (the panels at 2x) |
-| `assets/social-card.png` | The link preview image, 1200 × 630 |
-| `CNAME` | The custom domain |
+**[pagic.dev](https://pagic.dev)** · [Privacy](https://pagic.dev/privacy.html)
 
-## Domain
-
-`pagic.dev` is registered at Porkbun and points to GitHub Pages: four A records
-(`185.199.108.153` to `185.199.111.153`) and a `www` CNAME to `kosuvorov.github.io`.
-HTTPS is enforced.
+This repository is the website at pagic.dev.
