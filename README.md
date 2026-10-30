@@ -1,9 +1,12 @@
-# Pagic website
+# pagic.dev
 
-The public website for [pagic.dev](https://pagic.dev), served by GitHub Pages from
-the root of `main`. Plain HTML, CSS and a little JavaScript: no build step.
+The website for [Pagic](https://pagic.dev), a browser extension that recolors,
+declutters and rearranges any website.
 
-## Preview
+Plain HTML, CSS and JavaScript with no build step. It's hosted on GitHub Pages from
+the root of `main`, so every push goes live.
+
+## Run locally
 
 ```sh
 python3 -m http.server 4173
@@ -11,23 +14,21 @@ python3 -m http.server 4173
 
 Then open http://localhost:4173.
 
-## Before launch
+## Files
 
-- **Chrome Web Store link:** paste it into `storeUrl` in `config.js`. Until then the
-  buttons say "Coming soon to Chrome".
-- **Analytics:** paste the Umami script URL and website id into `config.js`. It
-  only runs on pagic.dev.
-- **Clay icons:** `assets/icons/` holds them as 512 px WebP. To redo one, see
-  [ICON-PROMPTS.md](ICON-PROMPTS.md) for the prompt and the command that shrinks it.
-- **Screenshots:** `assets/shots/` holds real screenshots of Pagic. Replace any of
-  them with your own at the same size (1600 × 1000, the panels at 2x) and name.
+| Path | What it is |
+| --- | --- |
+| `index.html` | The landing page |
+| `privacy.html` | The privacy policy |
+| `styles.css`, `app.js` | Styles, the before/after slider, feature dialogs and the Simple/Advanced switch |
+| `config.js` | The Chrome Web Store link and Umami analytics. While `storeUrl` is empty, the install buttons read "Coming soon to Chrome". Analytics only run on pagic.dev |
+| `assets/icons/` | Clay icons, 512 px WebP. Prompts are in [ICON-PROMPTS.md](ICON-PROMPTS.md) |
+| `assets/shots/` | Screenshots of Pagic, 1600 × 1000 (the panels at 2x) |
+| `assets/social-card.png` | The link preview image, 1200 × 630 |
+| `CNAME` | The custom domain |
 
-## Publish with GitHub Pages
+## Domain
 
-1. In the repository settings, open **Pages** and publish from the root of `main`.
-2. Point the DNS for `pagic.dev` to GitHub Pages: A records `185.199.108.153`,
-   `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, and a `www` CNAME to
-   `kosuvorov.github.io`.
-3. Enable **Enforce HTTPS** once GitHub offers it.
-
-The `CNAME` file already sets the custom domain to `pagic.dev`.
+`pagic.dev` is registered at Porkbun and points to GitHub Pages: four A records
+(`185.199.108.153` to `185.199.111.153`) and a `www` CNAME to `kosuvorov.github.io`.
+HTTPS is enforced.
