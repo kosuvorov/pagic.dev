@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagic - Make the internet yours again</title>
+  <meta name="description" content="Pagic is a browser extension that recolors, declutters and rearranges any website. Hide what you don't need, read without distractions, leave notes, and Pagic remembers it on every visit.">
+  <link rel="canonical" href="https://pagic.dev/">
+  <meta name="theme-color" content="#faf7f2">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon-128.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pagic.dev/">
+  <meta property="og:title" content="Pagic - Make the internet yours again">
+  <meta property="og:description" content="Recolor, declutter and rearrange any website. Pagic remembers it on every visit.">
+  <meta property="og:image" content="https://pagic.dev/assets/social.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pagic",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Chromium browsers",
+    "description": "Recolor, declutter and rearrange any website. Hide what you don't need, read without distractions, leave notes, and Pagic remembers it on every visit.",
+    "url": "https://pagic.dev/",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Pagic home">
+      <img src="assets/pagic.png" alt="" width="40" height="40">
+      <span>Pagic</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a class="button button-small" href="#get" data-install>Add to Chrome</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. The promise -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-cursor" src="assets/clay-cursor.webp" alt="" width="420" height="420">
+      <h1 id="hero-title">Make the internet<br><em>yours</em> again.</h1>
+      <p class="lede">Recolor, declutter and rearrange any website.<br class="wide-only"> Pagic remembers it, every visit.</p>
+      <div class="cta">
+        <a class="button" href="#get" data-install>
+          <img src="assets/pagic.png" alt="" width="28" height="28">
+          <span data-install-label>Add to Chrome</span>
+        </a>
+        <span class="cta-note" data-install-note>Free · Chrome and other Chromium browsers</span>
+      </div>
+      <figure class="hero-shot">
+        <img src="assets/shots/wiki-panel-simple.webp" alt="A Wikipedia article recolored in warm cream with Pagic, sticky notes on the page, and Pagic's settings panel floating on the right" width="1600" height="1000" fetchpriority="high">
+      </figure>
+    </section>
+
+    <!-- 2. Before and after -->
+    <section class="compare" id="see" aria-labelledby="compare-title">
+      <h2 id="compare-title">Same site. <em>Your</em> way.</h2>
+      <p class="sub">Drag the handle to see the difference.</p>
+      <div class="tabs" role="tablist" aria-label="Examples">
+        <button role="tab" aria-selected="true" data-before="assets/shots/wiki-original.webp" data-after="assets/shots/wiki-pagic.webp" data-alt="Wikipedia">Calmer colors</button>
+        <button role="tab" aria-selected="false" data-before="assets/shots/hn-original.webp" data-after="assets/shots/hn-pagic.webp" data-alt="Hacker News">Dark mode</button>
+        <button role="tab" aria-selected="false" data-before="assets/shots/wikipedia-original.webp" data-after="assets/shots/wikipedia-reader.webp" data-alt="A Wikipedia article">Reader</button>
+        <button role="tab" aria-selected="false" data-before="assets/shots/wiki-original.webp" data-after="assets/shots/wiki-notes.webp" data-alt="Wikipedia">Notes</button>
+      </div>
+      <div class="slider" style="--pos: 50%">
+        <img class="slider-after" src="assets/shots/wiki-pagic.webp" alt="Wikipedia with Pagic" width="1600" height="1000" loading="lazy">
+        <img class="slider-before" src="assets/shots/wiki-original.webp" alt="Wikipedia as it normally looks" width="1600" height="1000" loading="lazy">
+        <span class="slider-label left">Before</span>
+        <span class="slider-label right">With Pagic</span>
+        <span class="slider-handle" aria-hidden="true"></span>
+        <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+      </div>
+    </section>
+
+    <!-- 3. Selling points -->
+    <section class="features" id="features" aria-labelledby="features-title">
+      <h2 id="features-title">Everything you'd change,<br><em>if you could.</em></h2>
+      <div class="feature-grid">
+        <button class="feature" data-feature="recolor">
+          <img src="assets/icons/recolor.png" alt="" width="512" height="512" loading="lazy">
+          <h3>Recolor any site</h3>
+          <p>Any colors, dark mode, your font.</p>
+        </button>
+        <button class="feature" data-feature="hide">
+          <img src="assets/icons/hide.png" alt="" width="512" height="512" loading="lazy">
+          <h3>Hide the clutter</h3>
+          <p>Click it, and it's gone. For good.</p>
+        </button>
+        <button class="feature" data-feature="reader">
+          <img src="assets/clay-book.webp" alt="" width="660" height="440" loading="lazy">
+          <h3>Just read</h3>
+          <p>Any article, as a clean page.</p>
+        </button>
+        <button class="feature" data-feature="notes">
+          <img src="assets/icons/notes.png" alt="" width="512" height="512" loading="lazy">
+          <h3>Notes on any page</h3>
+          <p>Sticky notes and drawings that stay.</p>
+        </button>
+        <button class="feature" data-feature="remember">
+          <img src="assets/icons/remember.png" alt="" width="512" height="512" loading="lazy">
+          <h3>Remembers every site</h3>
+          <p>Your look comes back by itself.</p>
+        </button>
+        <button class="feature" data-feature="privacy">
+          <img src="assets/icons/privacy.png" alt="" width="512" height="512" loading="lazy">
+          <h3>Stays with you</h3>
+          <p>No account. Nothing leaves your browser.</p>
+        </button>
+      </div>
+    </section>
+
+    <!-- The details behind each selling point, shown in a dialog -->
+    <dialog class="detail" aria-labelledby="detail-title">
+      <form method="dialog"><button class="close" aria-label="Close">✕</button></form>
+      <div class="detail-body"></div>
+    </dialog>
+    <template id="detail-recolor">
+      <img src="assets/shots/hn-pagic.webp" alt="Hacker News in dark mode with a purple accent, made with Pagic" width="1600" height="1000">
+      <h3 id="detail-title">Recolor any site</h3>
+      <p>Drag one dot to tint the whole page, another to change its accent color: YouTube's red, Hacker News' orange, anything.</p>
+      <ul>
+        <li>Dark mode for sites that don't have one, or <strong>Auto</strong>, following your system.</li>
+        <li>Greyscale, brightness and contrast.</li>
+        <li>Any font on your computer, line height and text width.</li>
+      </ul>
+    </template>
+    <template id="detail-hide">
+      <img src="assets/shots/wiki-pagic.webp" alt="A Wikipedia article with the side panels and notices hidden" width="1600" height="1000">
+      <h3 id="detail-title">Hide the clutter</h3>
+      <p>Open <strong>Edit page</strong> and click anything on it: a sidebar, a banner, the comments, the recommendations. Hide it, and it stays hidden every time you come back.</p>
+      <ul>
+        <li>Move, resize or restyle things too.</li>
+        <li>Rewrite a heading, or swap a picture for your own.</li>
+        <li>Every change is listed, with an Undo.</li>
+      </ul>
+    </template>
+    <template id="detail-reader">
+      <img src="assets/shots/wikipedia-reader.webp" alt="A Wikipedia article in Pagic's Reader" width="1440" height="1000">
+      <h3 id="detail-title">Just read</h3>
+      <p><strong>Reader</strong> turns a busy article into a quiet page: the title, the text and its pictures, in a font and size you choose.</p>
+      <ul>
+        <li>Works on news, blogs, docs and forums.</li>
+        <li>Open it from Pagic or with <kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>R</kbd>.</li>
+      </ul>
+    </template>
+    <template id="detail-notes">
+      <img src="assets/shots/wiki-notes.webp" alt="Sticky notes and a hand-drawn circle on a Wikipedia article" width="1600" height="1000">
+      <h3 id="detail-title">Notes on any page</h3>
+      <p>Stick a note right next to the thing it's about, or draw on the page. Notes stay pinned to their spot, even when the page scrolls or changes size.</p>
+      <ul>
+        <li>Pick a color, a size and any font you have.</li>
+        <li>They're there next time you visit.</li>
+      </ul>
+    </template>
+    <template id="detail-remember">
+      <img class="detail-panel" src="assets/shots/panel-advanced.webp" alt="Pagic's settings panel, listing the changes made on a site" width="604" height="1752">
+      <h3 id="detail-title">Remembers every site</h3>
+      <p>Everything you change is saved as a <strong>preset</strong> for that site, and applied every time you open it.</p>
+      <ul>
+        <li>Several presets per site: "Reading", "Night", "Work".</li>
+        <li>A preset just for some pages, or just for dark mode.</li>
+        <li>Share a preset with a friend as a file.</li>
+      </ul>
+    </template>
+    <template id="detail-privacy">
+      <h3 id="detail-title">Stays with you</h3>
+      <p>Pagic has no account and no server. Your presets, notes and pictures are stored in your browser, and only you see them.</p>
+      <ul>
+        <li>Pagic asks before it touches a site, one site at a time.</li>
+        <li>No tracking, no ads.</li>
+        <li>The optional AI helper uses your own key, and only when you ask it something.</li>
+      </ul>
+      <p><a href="privacy.html">Read the privacy policy</a></p>
+    </template>
+
+    <!-- 4. Simple and Advanced -->
+    <section class="modes" aria-labelledby="modes-title">
+      <div class="modes-copy">
+        <h2 id="modes-title">Starts simple.<br><em>Grows with you.</em></h2>
+        <div class="switch" role="radiogroup" aria-label="Pagic mode">
+          <button role="radio" aria-checked="true" data-mode="simple">Simple</button>
+          <button role="radio" aria-checked="false" data-mode="advanced">Advanced</button>
+        </div>
+        <p class="mode-text" data-for="simple">Dark mode, Reader, and click-to-edit. Everything most people need, nothing more.</p>
+        <p class="mode-text" data-for="advanced" hidden>The color pad, every font, your own CSS, presets for some pages, and an AI helper. One switch away.</p>
+      </div>
+      <div class="modes-art">
+        <img class="mode-shot" data-for="simple" src="assets/shots/panel-simple.webp" alt="Pagic's panel in Simple mode" width="604" height="1136" loading="lazy">
+        <img class="mode-shot" data-for="advanced" src="assets/shots/panel-advanced.webp" alt="Pagic's panel in Advanced mode, with the color pad and font choices" width="604" height="1752" loading="lazy" hidden>
+      </div>
+    </section>
+
+    <!-- 5. The first review -->
+    <section class="review" aria-labelledby="review-title">
+      <h2 id="review-title" class="visually-hidden">Reviews</h2>
+      <span class="badge">Just launched · more reviews coming soon</span>
+      <figure class="sticky">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>
+          <p>Completely biased, but I use it every day. Hacker News is dark, Wikipedia is in New York, and my recipes are covered in sticky notes.</p>
+        </blockquote>
+        <figcaption>Konstantin, who made Pagic</figcaption>
+      </figure>
+    </section>
+
+    <!-- 6. Questions -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Questions</h2>
+      <details>
+        <summary>Is Pagic free?</summary>
+        <p>Yes. No account, no subscription, no ads.</p>
+      </details>
+      <details>
+        <summary>Which browsers does it work in?</summary>
+        <p>Chrome, and browsers built on Chromium 127 or newer, like Edge, Brave, Arc and Helium.</p>
+      </details>
+      <details>
+        <summary>Will other people see my changes?</summary>
+        <p>No. Pagic only changes how a site looks in your own browser. The site itself, and what everyone else sees, stays the same.</p>
+      </details>
+      <details>
+        <summary>Do I need to know how to code?</summary>
+        <p>Not at all. You click things and pick colors. If you do know CSS, Advanced mode lets you add your own.</p>
+      </details>
+      <details>
+        <summary>Can I get the original site back?</summary>
+        <p>Always. Hold the eye button to peek at the original, undo any single change, or switch Pagic off for that site. Your presets stay saved either way.</p>
+      </details>
+      <details>
+        <summary>Does it work on every site?</summary>
+        <p>On regular websites, yes. Browsers don't let any extension change their own pages, like the New Tab page, settings, or the Web Store. When a site redesigns itself, an edit may need a quick touch-up.</p>
+      </details>
+      <details>
+        <summary>What can Pagic see?</summary>
+        <p>Only the sites you let it customize, and it asks for each one. Everything it saves stays in your browser. See the <a href="privacy.html">privacy policy</a>.</p>
+      </details>
+      <details>
+        <summary>What's the AI helper?</summary>
+        <p>In Advanced mode you can describe a change ("make the comments smaller") and let Claude or ChatGPT make it. It's optional, uses your own API key, and only sends anything when you ask.</p>
+      </details>
+      <details>
+        <summary>Can I share my look with a friend?</summary>
+        <p>Yes. Save a preset as a file, with its pictures and fonts, and they can add it from Pagic's settings.</p>
+      </details>
+    </section>
+
+    <!-- 7. Get it -->
+    <section class="get" id="get" aria-labelledby="get-title">
+      <img src="assets/pagic.png" alt="" width="256" height="256" loading="lazy">
+      <h2 id="get-title">The internet is big.<br>Make your corner of it <em>yours.</em></h2>
+      <a class="button" href="#get" data-install>
+        <span data-install-label>Add to Chrome</span>
+      </a>
+      <p class="cta-note" data-install-note>Free · Chrome and other Chromium browsers</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span data-year>2026</span> Pagic</span>
+    <a href="privacy.html">Privacy</a>
+    <p class="credits">Screenshots show Wikipedia (CC BY-SA 4.0) and Hacker News as seen with Pagic. Not affiliated with either.</p>
+  </footer>
+</body>
+</html>
