@@ -46,7 +46,7 @@ Paste the **shared style** first, then each icon's line.
 | --- | --- | --- |
 | `assets/icons/sparkle.webp` | Above the FAQ heading | A chunky four-point lavender clay sparkle with a tiny butter-yellow clay sparkle beside it. |
 | `assets/icons/switch.webp` | Above the Simple / Advanced heading | A clay toggle switch: a cream pill-shaped track with a coral knob slid to one side. |
-| `assets/social.png` | The preview when the link is shared (1200 × 630) | Wide composition on a warm cream #faf7f2 background: the clay P wand logo on the left, the palette, sticky note and book icons arranged loosely on the right. Leave the left third calm for the words "Make the internet yours again." added later. |
+| `assets/social-card.png` | The preview when the link is shared (1200 × 630). The current one is made from the page itself; if you replace it, use a new file name, since social apps cache the old one | Wide composition on a warm cream #faf7f2 background: the clay P wand logo on the left, the palette, sticky note and book icons arranged loosely on the right. Leave the left third calm for the words "Make the internet yours again." added later. |
 
 If a result has a white or checkered background instead of real transparency, ask
 again for "actual transparent alpha background", or remove it with
