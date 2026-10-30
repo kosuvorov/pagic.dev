@@ -87,7 +87,9 @@ section > h2 + .sub { margin: 20px 0 0; font-size: 21px; }
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: 24px; font-weight: 700; letter-spacing: -0.03em; text-decoration: none; }
+/* The wordmark: the clay P from the logo, then "agic", sharing a baseline */
+.brand { display: inline-flex; align-items: baseline; color: var(--ink); font-size: 30px; font-weight: 700; line-height: 1; letter-spacing: -0.03em; text-decoration: none; }
+.brand img { width: auto; height: 1.15em; margin: 0 -0.13em -0.04em 0; }
 .site-header nav { display: flex; align-items: center; gap: clamp(14px, 3vw, 32px); }
 .site-header nav a:not(.button) { color: var(--ink); font-size: 17px; font-weight: 500; text-decoration: none; }
 .site-header nav a:not(.button):hover { color: var(--purple); }

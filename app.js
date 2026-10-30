@@ -60,7 +60,7 @@ for (const link of document.querySelectorAll("[data-install]")) {
 }
 if (!store) {
   for (const label of document.querySelectorAll("[data-install-label]")) label.textContent = "Coming soon to Chrome";
-  for (const note of document.querySelectorAll("[data-install-note]")) note.textContent = "Free · Arriving on the Chrome Web Store very soon";
+  for (const note of document.querySelectorAll("[data-install-note]")) note.textContent = "Arriving on the Chrome Web Store very soon";
   const small = document.querySelector(".site-header [data-install]");
   small.textContent = "Coming soon";
 }
