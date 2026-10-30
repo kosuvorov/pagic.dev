@@ -258,6 +258,10 @@ section > h2 + .sub { margin: 20px 0 0; font-size: 21px; }
 .detail-body li::marker { color: var(--coral); }
 kbd { padding: 2px 8px; border-radius: 6px; background: var(--cream-deep); font: inherit; font-size: 0.9em; }
 
+/* A small clay icon above a section's heading */
+.section-icon { width: 120px; margin: 0 0 20px -8px; }
+.faq .section-icon { margin: 0 auto 12px; }
+
 /* 4. Simple and Advanced */
 .modes {
   display: grid;
@@ -387,6 +391,7 @@ kbd { padding: 2px 8px; border-radius: 6px; background: var(--cream-deep); font:
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .modes { grid-template-columns: 1fr; text-align: center; }
   .mode-text { margin: 0 auto; }
+  .modes .section-icon { margin: 0 auto 16px; }
   .modes-art { min-height: 0; }
 }
 @media (max-width: 600px) {

@@ -17,9 +17,8 @@ Then open http://localhost:4173.
   buttons say "Coming soon to Chrome".
 - **Analytics:** paste the Umami script URL and website id into `config.js`. It
   only runs on pagic.dev.
-- **Clay icons:** the ones in `assets/icons/` are placeholders. See
-  [ICON-PROMPTS.md](ICON-PROMPTS.md) for the prompts, and overwrite the files with the
-  same names.
+- **Clay icons:** `assets/icons/` holds them as 512 px WebP. To redo one, see
+  [ICON-PROMPTS.md](ICON-PROMPTS.md) for the prompt and the command that shrinks it.
 - **Screenshots:** `assets/shots/` holds real screenshots of Pagic. Replace any of
   them with your own at the same size (1600 × 1000, the panels at 2x) and name.
 
