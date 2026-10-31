@@ -389,13 +389,22 @@ kbd { padding: 2px 8px; border-radius: 6px; background: var(--cream-deep); font:
 .site-footer a { color: inherit; }
 .credits { flex-basis: 100%; margin: 0; font-size: 14px; text-align: center; opacity: 0.8; }
 
-/* Privacy page */
-.prose { max-width: 720px; margin: 0 auto; padding: 64px 24px 120px; }
+/* Privacy, purchase terms and support */
+.prose { max-width: 760px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px 120px; }
 .prose h1 { font-size: clamp(44px, 7vw, 72px); }
-.prose h2 { margin-top: 56px; font-size: 30px; letter-spacing: -0.02em; }
-.prose .sub { margin-top: 16px; }
+.prose h2 { margin: 56px 0 16px; font-size: 30px; letter-spacing: -0.02em; line-height: 1.15; }
+.prose section { padding: 0; text-align: left; }
+.prose p { margin: 0 0 16px; }
+.prose .sub { margin: 20px 0 0; font-size: clamp(20px, 2.2vw, 23px); line-height: 1.45; }
+.prose .updated { margin-top: 16px; color: var(--ink-soft); font-size: 16px; }
+.prose a { text-underline-offset: 3px; overflow-wrap: anywhere; }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin-top: 8px; }
+.prose .callout { margin-top: 56px; padding: 32px; border-radius: var(--radius); background: var(--card); box-shadow: var(--clay-shadow); }
+.prose .callout h2 { margin-top: 0; }
+.prose .callout p:last-child { margin-bottom: 0; }
+.support-email { font-size: clamp(22px, 4vw, 30px); font-weight: 600; }
+.site-footer a[aria-current] { color: var(--purple-deep); }
 
 @media (max-width: 900px) {
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
@@ -427,6 +436,9 @@ kbd { padding: 2px 8px; border-radius: 6px; background: var(--cream-deep); font:
   .sticky { padding: 36px 26px 28px; }
   .sticky blockquote p { font-size: 22px; }
   .faq summary { font-size: 19px; padding: 20px 2px; }
+  .prose { padding-left: 16px; padding-right: 16px; }
+  .prose h2 { margin-top: 44px; font-size: 26px; }
+  .prose .callout { padding: 24px 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
