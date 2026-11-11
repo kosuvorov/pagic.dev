@@ -4,21 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pagic - Make the internet yours again</title>
-  <meta name="description" content="Pagic is a browser extension that recolors, declutters and rearranges any website. Hide what you don't need, read without distractions, leave notes, and Pagic remembers it on every visit.">
+  <meta name="description" content="Pagic is a browser extension that hides the clutter, recolors and marks up any website. Read without distractions, leave notes, and Pagic remembers it on every visit.">
   <link rel="canonical" href="https://pagic.dev/">
-  <meta name="theme-color" content="#faf7f2">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16141b" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/favicon-128.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pagic.dev/">
   <meta property="og:title" content="Pagic - Make the internet yours again">
-  <meta property="og:description" content="Recolor, declutter and rearrange any website. Pagic remembers it on every visit.">
+  <meta property="og:description" content="Hide the clutter, recolor and mark up any website. Pagic remembers it on every visit.">
   <meta property="og:image" content="https://pagic.dev/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Pagic: Make the internet yours again. Recolor, declutter and rearrange any website.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://pagic.dev/assets/social-card.png">
+  <!-- The theme you picked, before anything paints -->
+  <script>try { const theme = localStorage.getItem("pagic-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}</script>
   <link rel="preload" href="assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
@@ -28,11 +32,13 @@
     "name": "Pagic",
     "applicationCategory": "BrowserApplication",
     "operatingSystem": "Chrome, Chromium browsers",
-    "description": "Recolor, declutter and rearrange any website. Hide what you don't need, read without distractions, leave notes, and Pagic remembers it on every visit.",
-    "url": "https://pagic.dev/"
+    "description": "Hide the clutter, recolor and mark up any website. Read without distractions, leave notes, and Pagic remembers it on every visit.",
+    "url": "https://pagic.dev/",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
   <script src="config.js" defer></script>
+  <script src="theme.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -42,8 +48,13 @@
       <span>agic</span>
     </a>
     <nav aria-label="Main">
-      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
       <a class="button button-small" href="#get" data-install>Add to Chrome</a>
     </nav>
   </header>
@@ -57,16 +68,24 @@
         <img class="clay-star" src="assets/clay-star.webp" alt="" width="338" height="342">
       </div>
       <h1 id="hero-title">Make the internet<br><em>yours</em> again.</h1>
-      <p class="lede">Recolor, declutter and rearrange any website.<br class="wide-only"> Pagic remembers it, every visit.</p>
+      <p class="lede">Hide the clutter, pick your colors, leave notes.<br class="wide-only"> On any website, and it stays that way every visit.</p>
       <div class="cta">
         <a class="button" href="#get" data-install>
           <img src="assets/pagic.png" alt="" width="28" height="28">
           <span data-install-label>Add to Chrome</span>
         </a>
-        <span class="cta-note" data-install-note>For Chrome and other Chromium browsers</span>
+        <span class="cta-note" data-install-note>Free · For Chrome and other Chromium browsers</span>
       </div>
       <figure class="hero-shot">
-        <img src="assets/shots/wiki-panel-simple.webp" alt="A Wikipedia article recolored in warm cream with Pagic, sticky notes on the page, and Pagic's settings panel floating on the right" width="1600" height="1000" fetchpriority="high">
+        <img class="float float-hide" src="assets/clay/hide.webp" alt="" width="512" height="512" aria-hidden="true">
+        <img class="float float-paint" src="assets/clay/recolor.webp" alt="" width="512" height="512" aria-hidden="true">
+        <img class="float float-note" src="assets/clay/notes.webp" alt="" width="512" height="512" aria-hidden="true">
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span class="url">dailyloop.news</span><img src="assets/favicon-32.png" alt="" width="32" height="32"></div>
+          <img class="on-light" src="assets/shots2/hero-light.webp" alt="A news article with its ads and pop-ups hidden and its colors warmed up, and Pagic's panel open on the right with its color pad" width="2000" height="1250" fetchpriority="high">
+          <img class="on-dark" src="assets/shots2/hero-dark.webp" alt="A news article in dark mode with its ads and pop-ups hidden, and Pagic's dark panel open on the right" width="2000" height="1250">
+        </div>
+        <span class="scribble scribble-panel" aria-hidden="true">your panel ↘</span>
       </figure>
     </section>
 
@@ -75,14 +94,15 @@
       <h2 id="compare-title">Same site. <em>Your</em> way.</h2>
       <p class="sub">Drag the handle to see the difference.</p>
       <div class="tabs" role="tablist" aria-label="Examples">
-        <button role="tab" aria-selected="true" data-before="assets/shots/wiki-original.webp" data-after="assets/shots/wiki-pagic.webp" data-alt="Wikipedia">Calmer colors</button>
-        <button role="tab" aria-selected="false" data-before="assets/shots/hn-original.webp" data-after="assets/shots/hn-pagic.webp" data-alt="Hacker News">Dark mode</button>
-        <button role="tab" aria-selected="false" data-before="assets/shots/wikipedia-original.webp" data-after="assets/shots/wikipedia-reader.webp" data-alt="A Wikipedia article">Reader</button>
-        <button role="tab" aria-selected="false" data-before="assets/shots/wiki-original.webp" data-after="assets/shots/wiki-notes.webp" data-alt="Wikipedia">Notes</button>
+        <button role="tab" aria-selected="true" data-before="assets/shots2/before.webp" data-before-alt="A news article buried under a pop-up, a cookie banner and ads" data-after="assets/shots2/clean.webp" data-after-alt="The same article with the pop-up, cookie banner and ads hidden">Hide the clutter</button>
+        <button role="tab" aria-selected="false" data-before="assets/shots2/clean.webp" data-before-alt="A news article in its own colors" data-after="assets/shots2/colors.webp" data-after-alt="The same article recolored mint, with purple links">Your colors</button>
+        <button role="tab" aria-selected="false" data-before="assets/shots2/clean.webp" data-before-alt="A news article in its own light colors" data-after="assets/shots2/dark.webp" data-after-alt="The same article in dark mode, its picture unchanged">Dark mode</button>
+        <button role="tab" aria-selected="false" data-before="assets/shots2/clean.webp" data-before-alt="A news article" data-after="assets/shots2/notes.webp" data-after-alt="The same article with a highlight, an underline, an arrow and a sticky note">Notes</button>
+        <button role="tab" aria-selected="false" data-before="assets/shots2/before.webp" data-before-alt="A news article buried under a pop-up, a cookie banner and ads" data-after="assets/shots2/reader.webp" data-after-alt="The same article in Pagic's Reader: just the title, the picture and the text">Reader</button>
       </div>
       <div class="slider" style="--pos: 50%">
-        <img class="slider-after" src="assets/shots/wiki-pagic.webp" alt="Wikipedia with Pagic" width="1600" height="1000" loading="lazy">
-        <img class="slider-before" src="assets/shots/wiki-original.webp" alt="Wikipedia as it normally looks" width="1600" height="1000" loading="lazy">
+        <img class="slider-after" src="assets/shots2/clean.webp" alt="The same article with the pop-up, cookie banner and ads hidden" width="1600" height="1000" loading="lazy">
+        <img class="slider-before" src="assets/shots2/before.webp" alt="A news article buried under a pop-up, a cookie banner and ads" width="1600" height="1000" loading="lazy">
         <span class="slider-label left">Before</span>
         <span class="slider-label right">With Pagic</span>
         <span class="slider-handle" aria-hidden="true"></span>
@@ -90,126 +110,186 @@
       </div>
     </section>
 
-    <!-- 3. Selling points -->
-    <section class="features" id="features" aria-labelledby="features-title">
-      <h2 id="features-title">Everything you'd change,<br><em>if you could.</em></h2>
-      <div class="feature-grid">
-        <button class="feature" data-feature="recolor">
-          <img src="assets/icons/recolor.webp" alt="" width="512" height="512" loading="lazy">
-          <h3>Recolor any site</h3>
-          <p>Any colors, dark mode, your font.</p>
-        </button>
-        <button class="feature" data-feature="hide">
-          <img src="assets/icons/hide.webp" alt="" width="512" height="512" loading="lazy">
-          <h3>Hide the clutter</h3>
-          <p>Click it, and it's gone. For good.</p>
-        </button>
-        <button class="feature" data-feature="reader">
-          <img src="assets/clay-book.webp" alt="" width="660" height="440" loading="lazy">
-          <h3>Just read</h3>
-          <p>Any article, as a clean page.</p>
-        </button>
-        <button class="feature" data-feature="notes">
-          <img src="assets/icons/notes.webp" alt="" width="512" height="512" loading="lazy">
-          <h3>Notes on any page</h3>
-          <p>Sticky notes and drawings that stay.</p>
-        </button>
-        <button class="feature" data-feature="remember">
-          <img src="assets/icons/remember.webp" alt="" width="512" height="512" loading="lazy">
-          <h3>Remembers every site</h3>
-          <p>Your look comes back by itself.</p>
-        </button>
-        <button class="feature" data-feature="privacy">
-          <img src="assets/icons/privacy.webp" alt="" width="512" height="512" loading="lazy">
-          <h3>Stays with you</h3>
-          <p>No account. Nothing leaves your browser.</p>
-        </button>
-      </div>
-    </section>
+    <!-- 3. How it works, one thing at a time, with the real thing -->
+    <section class="how" id="how" aria-labelledby="how-title">
+      <h2 id="how-title">Everything you'd change,<br><em>if you could.</em></h2>
 
-    <!-- The details behind each selling point, shown in a dialog -->
-    <dialog class="detail" aria-labelledby="detail-title">
-      <form method="dialog"><button class="close" aria-label="Close">✕</button></form>
-      <div class="detail-body"></div>
-    </dialog>
-    <template id="detail-recolor">
-      <img src="assets/shots/hn-pagic.webp" alt="Hacker News in dark mode with a purple accent, made with Pagic" width="1600" height="1000">
-      <h3 id="detail-title">Recolor any site</h3>
-      <p>Drag one dot to tint the whole page, another to change its accent color: YouTube's red, Hacker News' orange, anything.</p>
-      <ul>
-        <li>Dark mode for sites that don't have one, or <strong>Auto</strong>, following your system.</li>
-        <li>Greyscale, brightness and contrast.</li>
-        <li>Any font on your computer, line height and text width.</li>
-      </ul>
-    </template>
-    <template id="detail-hide">
-      <img src="assets/shots/wiki-pagic.webp" alt="A Wikipedia article with the side panels and notices hidden" width="1600" height="1000">
-      <h3 id="detail-title">Hide the clutter</h3>
-      <p>Open <strong>Edit page</strong> and click anything on it: a sidebar, a banner, the comments, the recommendations. Hide it, and it stays hidden every time you come back.</p>
-      <ul>
-        <li>Move, resize or restyle things too.</li>
-        <li>Rewrite a heading, or swap a picture for your own.</li>
-        <li>Every change is listed, with an Undo.</li>
-      </ul>
-    </template>
-    <template id="detail-reader">
-      <img src="assets/shots/wikipedia-reader.webp" alt="A Wikipedia article in Pagic's Reader" width="1440" height="1000">
-      <h3 id="detail-title">Just read</h3>
-      <p><strong>Reader</strong> turns a busy article into a quiet page: the title, the text and its pictures, in a font and size you choose.</p>
-      <ul>
-        <li>Works on news, blogs, docs and forums.</li>
-        <li>Open it from Pagic or with <kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>R</kbd>.</li>
-      </ul>
-    </template>
-    <template id="detail-notes">
-      <img src="assets/shots/wiki-notes.webp" alt="Sticky notes and a hand-drawn circle on a Wikipedia article" width="1600" height="1000">
-      <h3 id="detail-title">Notes on any page</h3>
-      <p>Stick a note right next to the thing it's about, or draw on the page. Notes stay pinned to their spot, even when the page scrolls or changes size.</p>
-      <ul>
-        <li>Pick a color, a size and any font you have.</li>
-        <li>They're there next time you visit.</li>
-      </ul>
-    </template>
-    <template id="detail-remember">
-      <img class="detail-panel" src="assets/shots/panel-advanced.webp" alt="Pagic's settings panel, listing the changes made on a site" width="604" height="1752">
-      <h3 id="detail-title">Remembers every site</h3>
-      <p>Everything you change is saved as a <strong>preset</strong> for that site, and applied every time you open it.</p>
-      <ul>
-        <li>Several presets per site: "Reading", "Night", "Work".</li>
-        <li>A preset just for some pages, or just for dark mode.</li>
-        <li>Share a preset with a friend as a file.</li>
-      </ul>
-    </template>
-    <template id="detail-privacy">
-      <h3 id="detail-title">Stays with you</h3>
-      <p>Pagic has no account and no server. Your presets, notes and pictures are stored in your browser, and only you see them.</p>
-      <ul>
-        <li>Pagic asks before it touches a site, one site at a time.</li>
-        <li>No tracking, no ads.</li>
-        <li>The optional AI helper uses your own key, and only when you ask it something.</li>
-      </ul>
-      <p><a href="privacy/">Read the privacy policy</a></p>
-    </template>
-
-    <!-- 4. Simple and Advanced -->
-    <section class="modes" aria-labelledby="modes-title">
-      <div class="modes-copy">
-        <img class="section-icon" src="assets/icons/switch.webp" alt="" width="512" height="512" loading="lazy">
-        <h2 id="modes-title">Starts simple.<br><em>Grows with you.</em></h2>
-        <div class="switch" role="radiogroup" aria-label="Pagic mode">
-          <button role="radio" aria-checked="true" data-mode="simple">Simple</button>
-          <button role="radio" aria-checked="false" data-mode="advanced">Advanced</button>
+      <article class="use">
+        <div class="use-copy">
+          <img class="use-icon" src="assets/clay/hide.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Hide anything with a click</h3>
+          <p>Open <strong>Edit page</strong>, click the pop-up, the ad or the cookie wall, and choose Hide. It's gone, every time you come back.</p>
+          <ul>
+            <li>Edit text, resize, move or restyle anything.</li>
+            <li>Swap a picture for one of your own.</li>
+            <li>Every change is listed, and one switch turns it off.</li>
+          </ul>
         </div>
-        <p class="mode-text" data-for="simple">Dark mode, Reader, and click-to-edit. Everything most people need, nothing more.</p>
-        <p class="mode-text" data-for="advanced" hidden>The color pad, every font, your own CSS, presets for some pages, and an AI helper. One switch away.</p>
-      </div>
-      <div class="modes-art">
-        <img class="mode-shot" data-for="simple" src="assets/shots/panel-simple.webp" alt="Pagic's panel in Simple mode" width="604" height="1136" loading="lazy">
-        <img class="mode-shot" data-for="advanced" src="assets/shots/panel-advanced.webp" alt="Pagic's panel in Advanced mode, with the color pad and font choices" width="604" height="1752" loading="lazy" hidden>
+        <figure class="use-shot frame fade">
+          <img class="on-light" src="assets/shots2/edit-light.webp" alt="An ad picked on the page, with Pagic's menu next to it: Hide, Edit text, Resize, Move, Style and more, and the Edit page toolbar below" width="1225" height="925" loading="lazy">
+          <img class="on-dark" src="assets/shots2/edit-dark.webp" alt="An ad picked on a page in dark mode, with Pagic's dark menu next to it and the Edit page toolbar below" width="1225" height="925" loading="lazy">
+        </figure>
+      </article>
+
+      <article class="use">
+        <div class="use-copy">
+          <img class="use-icon" src="assets/clay/recolor.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Your colors, on any site</h3>
+          <p>Drag the big dot to tint the page, and the small one to change its accent. Or press the moon for dark mode, on sites that don't have one.</p>
+          <ul>
+            <li>Photos and videos keep their real colors.</li>
+            <li>Brightness, contrast, and the page's own colors, one by one.</li>
+            <li>Any font, including OpenDyslexic.</li>
+          </ul>
+          <div class="swatches" aria-hidden="true">
+            <img src="assets/shots2/clean.webp" alt="" width="1600" height="1000" loading="lazy">
+            <img src="assets/shots2/colors.webp" alt="" width="1600" height="1000" loading="lazy">
+            <img src="assets/shots2/dark.webp" alt="" width="1600" height="1000" loading="lazy">
+          </div>
+        </div>
+        <figure class="use-shot frame fade tall">
+          <img class="on-light" src="assets/shots2/colors-light.webp" alt="Pagic's panel with the color pad, its two dots, and the buttons for hiding, dark mode, fonts and notes" width="875" height="1000" loading="lazy">
+          <img class="on-dark" src="assets/shots2/colors-dark.webp" alt="Pagic's dark panel with the color pad and dark mode on" width="875" height="1000" loading="lazy">
+        </figure>
+      </article>
+
+      <article class="use">
+        <div class="use-copy">
+          <img class="use-icon" src="assets/clay/notes.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Highlight, draw, leave notes</h3>
+          <p><strong>Markup</strong> puts a pen, a highlighter, arrows, shapes and sticky notes on any page. They're still there when you come back.</p>
+          <ul>
+            <li>A black marker for what you'd rather not see.</li>
+            <li>A spotlight and a laser for sharing your screen.</li>
+          </ul>
+        </div>
+        <figure class="use-shot frame wide">
+          <img class="on-light" src="assets/shots2/markup-light.webp" alt="A highlighted sentence, an underline, a sticky note saying Yes! Send this to Sam with an arrow, and the Markup toolbar" width="1600" height="550" loading="lazy">
+          <img class="on-dark" src="assets/shots2/markup-dark.webp" alt="The same highlight, underline, note and arrow on a dark page, with the Markup toolbar" width="1600" height="550" loading="lazy">
+        </figure>
+      </article>
+
+      <article class="use">
+        <div class="use-copy">
+          <img class="use-icon" src="assets/clay/book.webp" alt="" width="660" height="440" loading="lazy">
+          <h3>Read without the noise</h3>
+          <p><strong>Reader</strong> turns an article into a calm page: the title, the pictures and the words. Free, on every site.</p>
+          <ul>
+            <li>Your size, your theme, your font.</li>
+            <li>Open it from Pagic or with <kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>R</kbd>.</li>
+          </ul>
+        </div>
+        <figure class="use-shot frame fade">
+          <img class="on-light" src="assets/shots2/reader-light.webp" alt="An article in Reader on a sepia page, with the Text menu open: text size, five themes and fonts including OpenDyslexic" width="1175" height="775" loading="lazy">
+          <img class="on-dark" src="assets/shots2/reader-dark.webp" alt="An article in Reader on a night theme, with the Text menu open" width="1175" height="775" loading="lazy">
+        </figure>
+      </article>
+
+      <article class="use">
+        <div class="use-copy">
+          <img class="use-icon" src="assets/clay/remember.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>A preset for every mood</h3>
+          <p>Keep a few looks for a site and switch in a click: one for reading, one for late at night, one for getting work done.</p>
+          <ul>
+            <li>Just for some pages, or just in dark or light mode.</li>
+            <li>Copy a look from another site.</li>
+            <li>Export a preset as a file, and import one from a friend.</li>
+          </ul>
+        </div>
+        <figure class="use-shot frame fade tall">
+          <img class="on-light" src="assets/shots2/presets-light.webp" alt="Pagic's preset menu: Quiet reading, Night owl and Focus mode, with New preset, Duplicate, Rename, Where and when it applies, Copy look from, Export as a file and Import from a file" width="738" height="1000" loading="lazy">
+          <img class="on-dark" src="assets/shots2/presets-dark.webp" alt="Pagic's preset menu in dark mode" width="738" height="1000" loading="lazy">
+        </figure>
+      </article>
+
+      <div class="extras">
+        <div class="extra">
+          <img src="assets/clay/sparkle.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Comes back by itself</h3>
+          <p>Your changes are saved for each site and applied on every visit.</p>
+        </div>
+        <div class="extra">
+          <img src="assets/clay/privacy.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Stays with you</h3>
+          <p>No account. Everything is saved in your browser, and only you see it.</p>
+        </div>
+        <div class="extra">
+          <img src="assets/clay/tool-ask.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Or just ask</h3>
+          <p>Describe a change in words and let AI make it. Optional, with your own key.</p>
+        </div>
       </div>
     </section>
 
-    <!-- 5. The first review -->
+    <!-- 4. Who it's for -->
+    <section class="made-for" aria-labelledby="made-for-title">
+      <h2 id="made-for-title">Made for <em>you</em>, whoever you are.</h2>
+      <div class="notes">
+        <div class="note note-lilac">
+          <img src="assets/clay/tool-dark.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Night owls</h3>
+          <p>Dark mode on the sites that never got one. Your eyes will thank you at 2am.</p>
+        </div>
+        <div class="note note-yellow">
+          <img src="assets/clay/hide.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Deep work</h3>
+          <p>Hide the feeds, the "recommended for you" and the comments. Keep the part you came for.</p>
+        </div>
+        <div class="note note-mint">
+          <img src="assets/clay/tool-highlight.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Students</h3>
+          <p>Highlight the sources, scribble in the margins, and find it all there next week.</p>
+        </div>
+        <div class="note note-peach">
+          <img src="assets/clay/tool-fonts.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Easier reading</h3>
+          <p>Bigger text, calmer colors, more space between lines, or OpenDyslexic.</p>
+        </div>
+        <div class="note note-blue">
+          <img src="assets/clay/book.webp" alt="" width="660" height="440" loading="lazy">
+          <h3>Home cooks</h3>
+          <p>Reader skips the life story and goes straight to the recipe.</p>
+        </div>
+        <div class="note note-pink">
+          <img src="assets/clay/tool-laser.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Show and tell</h3>
+          <p>Point things out with a laser or a spotlight while you share your screen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Free and Pro -->
+    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+      <h2 id="pricing-title">Free to start.<br><em>Pro</em> when you want more.</h2>
+      <div class="plans">
+        <div class="plan">
+          <img src="assets/clay/gift.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Free</h3>
+          <p class="price">$0 <span>forever</span></p>
+          <ul>
+            <li>Every tool, on one site at a time</li>
+            <li>Reader on every site</li>
+            <li>No account, no card</li>
+          </ul>
+          <a class="button button-small" href="#get" data-install>Add to Chrome</a>
+        </div>
+        <div class="plan plan-pro">
+          <img src="assets/clay/crown.webp" alt="" width="512" height="512" loading="lazy">
+          <h3>Pro</h3>
+          <p class="price">$4.99 <span>a month</span></p>
+          <p class="price-more">or $24.99 a year, or $49.99 once</p>
+          <ul>
+            <li>Every site, all at once</li>
+            <li>Presets for pages, and for dark or light</li>
+            <li>Copy looks, export and import presets</li>
+          </ul>
+          <p class="plan-note">Get Pro from Pagic itself, after you install it.</p>
+        </div>
+      </div>
+      <p class="pricing-note">Taxes are shown at checkout. If Pro ends, nothing you made is deleted.</p>
+    </section>
+
+    <!-- 6. The first review -->
     <section class="review" aria-labelledby="review-title">
       <h2 id="review-title" class="visually-hidden">Reviews</h2>
       <span class="badge">Just launched · more reviews coming soon</span>
@@ -222,9 +302,9 @@
       </figure>
     </section>
 
-    <!-- 6. Questions -->
+    <!-- 7. Questions -->
     <section class="faq" id="faq" aria-labelledby="faq-title">
-      <img class="section-icon" src="assets/icons/sparkle.webp" alt="" width="512" height="512" loading="lazy">
+      <img class="section-icon" src="assets/clay/sparkle.webp" alt="" width="512" height="512" loading="lazy">
       <h2 id="faq-title">Questions</h2>
       <details>
         <summary>Which browsers does it work in?</summary>
@@ -236,15 +316,19 @@
       </details>
       <details>
         <summary>Do I need to know how to code?</summary>
-        <p>Not at all. You click things and pick colors. If you do know CSS, Advanced mode lets you add your own.</p>
+        <p>Not at all. You click things and pick colors. If you do know CSS, you can switch on Code in Pagic's settings and add your own.</p>
       </details>
       <details>
         <summary>Can I get the original site back?</summary>
-        <p>Always. Hold the eye button to peek at the original, undo any single change, or switch Pagic off for that site. Your presets stay saved either way.</p>
+        <p>Always. Every change is listed in Pagic, with a switch to turn it off or a button to remove it, and ⌘Z undoes the last one. The big switch at the top turns Pagic off for that site. Your presets stay saved either way.</p>
+      </details>
+      <details>
+        <summary>What's the difference between Free and Pro?</summary>
+        <p>Free has every tool, on one site at a time, and Reader everywhere. Pro customizes every site at once and adds presets: several looks per site, looks for some pages or for dark mode, and sharing them as files.</p>
       </details>
       <details>
         <summary>Does it work on every site?</summary>
-        <p>On regular websites, yes. Browsers don't let any extension change their own pages, like the New Tab page, settings, or the Web Store. When a site redesigns itself, an edit may need a quick touch-up.</p>
+        <p>On regular websites, yes. Browsers don't let any extension change their own pages, like the New Tab page, settings, or the Web Store. When a site redesigns itself, a change may need a quick touch-up.</p>
       </details>
       <details>
         <summary>What can Pagic see?</summary>
@@ -252,22 +336,26 @@
       </details>
       <details>
         <summary>What's the AI helper?</summary>
-        <p>In Advanced mode you can describe a change ("make the comments smaller") and let Claude or ChatGPT make it. It's optional, uses your own API key, and only sends anything when you ask.</p>
+        <p>Turn on Ask in Pagic's settings, describe a change ("make the comments smaller"), and Claude or ChatGPT makes it as a draft you keep or throw away. It's optional, uses your own API key, and only sends anything when you ask.</p>
       </details>
       <details>
         <summary>Can I share my look with a friend?</summary>
-        <p>Yes. Save a preset as a file, with its pictures and fonts, and they can add it from Pagic's settings.</p>
+        <p>Yes, with Pro. Choose <strong>Export as a file</strong> in the preset menu, and they add it with <strong>Import from a file</strong>. Its pictures and fonts go along.</p>
+      </details>
+      <details>
+        <summary>How do I cancel Pro?</summary>
+        <p>In <a href="https://polar.sh/kanstantsin-suvorau/portal" rel="noreferrer">your Polar customer portal</a>, any time. See <a href="support/">support</a> for help with licenses.</p>
       </details>
     </section>
 
-    <!-- 7. Get it -->
+    <!-- 8. Get it -->
     <section class="get" id="get" aria-labelledby="get-title">
       <img src="assets/pagic.png" alt="" width="256" height="256" loading="lazy">
       <h2 id="get-title">The internet is big.<br>Make a corner of it <em>yours.</em></h2>
       <a class="button" href="#get" data-install>
         <span data-install-label>Add to Chrome</span>
       </a>
-      <p class="cta-note" data-install-note>For Chrome and other Chromium browsers</p>
+      <p class="cta-note" data-install-note>Free · For Chrome and other Chromium browsers</p>
     </section>
   </main>
 
@@ -276,7 +364,7 @@
     <a href="privacy/">Privacy</a>
     <a href="terms/">Purchase terms</a>
     <a href="support/">Support</a>
-    <p class="credits">Screenshots show Wikipedia (CC BY-SA 4.0) and Hacker News as seen with Pagic. Not affiliated with either.</p>
+    <p class="credits">Screenshots show Pagic on The Daily Loop, a made-up news site.</p>
   </footer>
 </body>
 </html>

@@ -8,9 +8,12 @@
   <link rel="canonical" href="https://pagic.dev/privacy/">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="apple-touch-icon" href="/assets/favicon-128.png">
+  <script>try { const theme = localStorage.getItem("pagic-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}</script>
+  <meta name="color-scheme" content="light dark">
   <link rel="stylesheet" href="/styles.css">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <script src="/config.js" defer></script>
+  <script src="/theme.js" defer></script>
   <script src="/analytics.js" defer></script>
 </head>
 <body>
@@ -20,8 +23,13 @@
       <span>agic</span>
     </a>
     <nav aria-label="Main">
-      <a href="/#features">Features</a>
+      <a href="/#how">How it works</a>
+      <a href="/#pricing">Pricing</a>
       <a href="/#faq">FAQ</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
       <a class="button button-small" href="/#get">Get Pagic</a>
     </nav>
   </header>
@@ -66,7 +74,7 @@
       <p>Where applicable, processing is based on providing the service or purchase you request, your choice to enable optional AI transfers, legitimate interests in support and security, or legal obligations. Hosting, email, payment and AI providers may process information outside your country, under their applicable terms and safeguards.</p>
     </section>
     <section><h2>Retention, deletion and your choices</h2>
-      <p>Local customizations remain until you delete them or remove the extension. Unused picture and font assets are cleaned up on browser startup. You can export presets, delete a site's presets, revoke site access in the browser, remove each AI provider's key in Manage presets, or uninstall Pagic to remove its local extension data. Removing a saved key does not revoke it at the provider; use the provider's dashboard for that.</p>
+      <p>Local customizations remain until you delete them or remove the extension. Unused picture and font assets are cleaned up on browser startup. You can export presets, delete a site's presets, revoke site access in the browser, remove each AI provider's key in Pagic's Settings, or uninstall Pagic to remove its local extension data. Removing a saved key does not revoke it at the provider; use the provider's dashboard for that.</p>
       <p>Removing a license or uninstalling Pagic does not cancel a subscription or erase records held by Polar or an AI provider. Use <a href="https://polar.sh/kanstantsin-suvorau/portal" rel="noreferrer">the Polar customer portal</a> to manage subscriptions. Copies of exports or backups you made remain wherever you saved them.</p>
       <p>Support and purchase records are retained only as needed to provide support, maintain required business records, resolve disputes or comply with law. Provider-held records follow the relevant provider's retention policy.</p>
       <p>Depending on your location, you may have rights to access, correct, delete or receive a copy of personal information, restrict or object to processing, withdraw consent, or complain to your data protection authority. Contact <a href="mailto:support@pagic.dev">support@pagic.dev</a> to exercise rights concerning information we hold. We may need to verify your request, and legally required records may need to be retained. We cannot retrieve your local-only presets from a server.</p>
