@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog: customize any website in Chrome | Pagic</title>
+  <meta name="description" content="Guides to making websites your own in Chrome: hide YouTube Shorts and feeds, dark mode for any site, Arc Boosts alternatives, Reader, notes and highlights.">
+  <link rel="canonical" href="https://pagic.dev/blog/">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16141b" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/favicon-128.png">
+  <link rel="alternate" type="application/rss+xml" title="The Pagic blog" href="/blog/rss.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pagic">
+  <meta property="og:url" content="https://pagic.dev/blog/">
+  <meta property="og:title" content="The Pagic blog">
+  <meta property="og:description" content="Guides to customizing websites in Chrome, from the maker of Pagic.">
+  <meta property="og:image" content="https://pagic.dev/assets/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://pagic.dev/assets/social-card.png">
+  <script>try { const theme = localStorage.getItem("pagic-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}</script>
+  <link rel="preload" href="/assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script type="application/ld+json">
+{{SCHEMA}}
+  </script>
+  <script src="/config.js" defer></script>
+  <script src="/theme.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Pagic home">
+      <img src="/assets/wordmark-p.webp" alt="" width="140" height="200">
+      <span>agic</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="button button-small" href="/#get">Get Pagic</a>
+    </nav>
+  </header>
+  <main class="blog-index" id="main">
+    <h1>The <em>Pagic</em> blog</h1>
+    <p class="sub">How to make websites work the way you want: hide what distracts you, read in peace, and keep your changes on every visit.</p>
+    <div class="post-cards">{{CARDS}}
+    </div>
+  </main>
+  <footer class="site-footer">
+    <span>© 2026 Pagic</span>
+    <a href="/">Home</a>
+    <a href="/blog/" aria-current="page">Blog</a>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Purchase terms</a>
+    <a href="/support/">Support</a>
+    <a href="/blog/rss.xml">RSS</a>
+  </footer>
+</body>
+</html>

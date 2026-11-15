@@ -1,0 +1,11 @@
+{
+  "name": "pagic-dev",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-blog.mjs"
+  },
+  "dependencies": {
+    "marked": "^17.0.1"
+  }
+}

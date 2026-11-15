@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arc Boosts Alternative for Chrome (Before Arc Shuts Down)</title>
+  <meta name="description" content="Arc stops working on December 22, 2026, and Dia can't import Boosts. Here's how to keep your colors, fonts, zaps and custom CSS in Chrome.">
+  <link rel="canonical" href="https://pagic.dev/blog/arc-boosts-alternative-for-chrome/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Konstantin Suvorov">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16141b" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/favicon-128.png">
+  <link rel="alternate" type="application/rss+xml" title="The Pagic blog" href="/blog/rss.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Pagic">
+  <meta property="og:url" content="https://pagic.dev/blog/arc-boosts-alternative-for-chrome/">
+  <meta property="og:title" content="Arc Boosts Alternative: Keep Your Boosts After Arc Shuts Down">
+  <meta property="og:description" content="Arc stops working on December 22, 2026, and Dia can't import Boosts. Here's how to keep your colors, fonts, zaps and custom CSS in Chrome.">
+  <meta property="og:image" content="https://pagic.dev/assets/shots2/edit-light.webp">
+  <meta property="article:published_time" content="2026-11-15">
+  <meta property="article:modified_time" content="2026-11-15">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arc Boosts Alternative: Keep Your Boosts After Arc Shuts Down">
+  <meta name="twitter:description" content="Arc stops working on December 22, 2026, and Dia can't import Boosts. Here's how to keep your colors, fonts, zaps and custom CSS in Chrome.">
+  <meta name="twitter:image" content="https://pagic.dev/assets/shots2/edit-light.webp">
+  <script>try { const theme = localStorage.getItem("pagic-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}</script>
+  <link rel="preload" href="/assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Arc Boosts Alternative: Keep Your Boosts After Arc Shuts Down",
+    "description": "Arc stops working on December 22, 2026, and Dia can't import Boosts. Here's how to keep your colors, fonts, zaps and custom CSS in Chrome.",
+    "image": "https://pagic.dev/assets/shots2/edit-light.webp",
+    "datePublished": "2026-11-15",
+    "dateModified": "2026-11-15",
+    "author": {
+      "@type": "Person",
+      "name": "Konstantin Suvorov",
+      "url": "https://pagic.dev/about/",
+      "sameAs": [
+        "https://konsu.dev/",
+        "https://github.com/kosuvorov",
+        "https://www.linkedin.com/in/kosuvorov",
+        "https://www.youtube.com/@kosuvorov"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pagic",
+      "url": "https://pagic.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pagic.dev/assets/pagic.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://pagic.dev/blog/arc-boosts-alternative-for-chrome/"
+    },
+    "keywords": [
+      "arc boosts alternative",
+      "arc boosts chrome",
+      "boosts for chrome",
+      "arc browser shutting down",
+      "arc boosts dia"
+    ],
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Pagic",
+      "applicationCategory": "BrowserApplication",
+      "url": "https://pagic.dev/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Pagic",
+        "item": "https://pagic.dev/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://pagic.dev/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Arc Boosts Alternative: Keep Your Boosts After Arc Shuts Down",
+        "item": "https://pagic.dev/blog/arc-boosts-alternative-for-chrome/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I export my Arc Boosts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not as a file Chrome understands. You can copy the CSS and JavaScript from each Boost's Code tab and rebuild colors, fonts and zaps by hand in another tool, which takes a few minutes per site."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Dia have Boosts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Dia imports bookmarks, passwords, history, extensions and spaces from Arc, but not Boosts. A Chrome extension like Pagic or Stylus is the way to keep them in Dia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When does Arc stop working?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Arc's desktop apps stop working on December 22, 2026, and new accounts are already closed. Import anything you want to keep before that date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free Arc Boosts alternative for Chrome?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Pagic is free for one site at a time with every tool, and Stylus is free but needs you to write CSS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Pagic run JavaScript like Arc Boosts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Pagic changes pages with CSS and its own small script for rewritten text and notes, and never runs code you paste in. For JavaScript Boosts, use a userscript manager like Tampermonkey."
+        }
+      }
+    ]
+  }
+]
+  </script>
+  <script src="/config.js" defer></script>
+  <script src="/theme.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Pagic home">
+      <img src="/assets/wordmark-p.webp" alt="" width="140" height="200">
+      <span>agic</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="button button-small" href="/#get">Get Pagic</a>
+    </nav>
+  </header>
+  <main class="post" id="main">
+    <article>
+      <nav class="post-crumbs" aria-label="Breadcrumb"><a href="/">Pagic</a> <span aria-hidden="true">›</span> <a href="/blog/">Blog</a></nav>
+      <h1>Arc Boosts Alternative: Keep Your Boosts After Arc Shuts Down</h1>
+      <p class="post-meta">By <a href="/about/" rel="author">Konstantin Suvorov</a>, who makes Pagic · <time datetime="2026-11-15">15 November 2026</time> · 6 min read</p>
+      <nav class="post-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#what-39-s-happening-to-arc-and-its-boosts">What&#39;s happening to Arc and its Boosts?</a></li><li><a href="#what-did-arc-boosts-actually-do">What did Arc Boosts actually do?</a></li><li><a href="#the-best-arc-boosts-alternatives-in-2026">The best Arc Boosts alternatives in 2026</a></li><li><a href="#how-to-move-your-arc-boosts-to-chrome-step-by-step">How to move your Arc Boosts to Chrome, step by step</a></li><li><a href="#does-pagic-work-in-dia">Does Pagic work in Dia?</a></li><li><a href="#what-about-boosts-you-shared-or-installed-from-someone-else">What about Boosts you shared or installed from someone else?</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li></ol></nav>
+      <div class="post-body">
+<p>The closest Arc Boosts alternative for Chrome is an extension that does per-site colors, fonts, hiding (&quot;zaps&quot;) and custom CSS in one place, and saves it for every visit. That&#39;s what I built Pagic to do. Arc stops working on December 22, 2026, and Dia doesn&#39;t import Boosts, so the time to move them is now. Here&#39;s how, step by step, and what else is out there.</p>
+<h2 id="what-39-s-happening-to-arc-and-its-boosts">What&#39;s happening to Arc and its Boosts?</h2>
+<p>The Browser Company announced in October 2026 that Arc is being shut down. New Arc accounts can&#39;t be created anymore, and the desktop apps on macOS and Windows stop working on <strong>December 22, 2026</strong>, according to <a href="https://alternativeto.net/news/2026/10/the-browser-company-confirms-arc-browser-sunset-directs-users-to-ai-powered-successor-dia/" rel="noopener" target="_blank">their announcement coverage on AlternativeTo</a>. Arc users are pointed to Dia, which can import bookmarks, passwords, history, extensions and spaces.</p>
+<p>Boosts are the part that doesn&#39;t come along. Dia has no Boosts feature, and Boosts aren&#39;t part of Dia&#39;s import. If you spent years tuning the sites you use every day, that work stays in Arc unless you move it yourself.</p>
+<h2 id="what-did-arc-boosts-actually-do">What did Arc Boosts actually do?</h2>
+<p>Arc Boosts changed how a website looked for you, every time you opened it. A Boost could do four things:</p>
+<ol>
+<li><strong>Colors</strong>: tint a whole site to a color you picked, or flip it dark.</li>
+<li><strong>Fonts</strong>: swap the site&#39;s font for another one.</li>
+<li><strong>Zap</strong>: click an element (a sidebar, a banner, the comments) and it was gone for good.</li>
+<li><strong>Code</strong>: write your own CSS and JavaScript for the site.</li>
+</ol>
+<p>So a replacement needs all four, per site, remembered between visits. Most Chrome extensions do one of these. A dark mode extension does colors, an ad blocker&#39;s element picker does zaps, Stylus does CSS. Arc&#39;s trick was having them in one small panel, so you actually used it.</p>
+<h2 id="the-best-arc-boosts-alternatives-in-2026">The best Arc Boosts alternatives in 2026</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Colors</th>
+<th>Fonts</th>
+<th>Zap (hide)</th>
+<th>Custom CSS</th>
+<th>Custom JS</th>
+<th>Browser</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Pagic</strong></td>
+<td>Yes, tint + accent + dark mode</td>
+<td>Yes, any installed font</td>
+<td>Yes, click to hide, or all like it</td>
+<td>Yes</td>
+<td>No</td>
+<td>Chrome, Edge, Brave, Dia, other Chromium</td>
+</tr>
+<tr>
+<td><strong>Zen Browser Boosts</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes (zap)</td>
+<td>Yes</td>
+<td>No</td>
+<td>Zen only (Firefox-based)</td>
+</tr>
+<tr>
+<td><strong>Stylus</strong></td>
+<td>Only by writing CSS</td>
+<td>Only by writing CSS</td>
+<td>Only by writing CSS</td>
+<td>Yes</td>
+<td>No</td>
+<td>Chrome, Firefox</td>
+</tr>
+<tr>
+<td><strong>Tampermonkey / Violentmonkey</strong></td>
+<td>By writing code</td>
+<td>By writing code</td>
+<td>By writing code</td>
+<td>Via scripts</td>
+<td>Yes</td>
+<td>Chrome, Firefox</td>
+</tr>
+<tr>
+<td><strong>Dark Reader</strong></td>
+<td>Dark mode only</td>
+<td>Font override</td>
+<td>No</td>
+<td>Dev tools only</td>
+<td>No</td>
+<td>Chrome, Firefox, Safari</td>
+</tr>
+</tbody></table></div>
+<h3>Pagic: the closest match for Chrome</h3>
+<p><strong>Best if you want Boosts as they were, without switching to a Firefox-based browser.</strong> Pagic opens a small floating panel on the page, like Arc&#39;s Boost panel. A color pad with two dots tints the page and changes its accent color, the moon turns on dark mode for sites that don&#39;t have one, the Aa button picks a font, and <strong>Edit page</strong> lets you click anything and hide it. If you wrote CSS in your Boosts, Pagic has a Code box that&#39;s applied last, so it wins.</p>
+<p>I&#39;ll be honest about what it doesn&#39;t do: Pagic doesn&#39;t run custom JavaScript. I left that out on purpose, because an extension that runs arbitrary scripts on your pages is a much bigger security risk, and colors, fonts, zaps and CSS are all there.</p>
+<p>Pagic is free for one site at a time, with every tool. Pro covers every site and adds presets: several looks per site, looks that only apply to some pages or only in dark mode, and exporting a look as a file to share.</p>
+<h3>Zen Browser Boosts</h3>
+<p><strong>Best if you&#39;re happy to switch browsers.</strong> Zen added its own Boosts in 2026, with colors, fonts, styles, automatic dark mode and a zap tool, and later versions added Arc import and shareable Boosts. It&#39;s a good option. The catch is that Zen is built on Firefox, so if you want to stay on Chrome, or on Dia like The Browser Company suggests, it means a whole new browser.</p>
+<h3>Stylus</h3>
+<p><strong>Best if you write CSS.</strong> Stylus is free and open source and has been around for years. It manages user styles per site, and you can install styles other people have written. There&#39;s no point-and-click though: every change is CSS you write or find.</p>
+<h3>Tampermonkey or Violentmonkey</h3>
+<p><strong>Best for the JavaScript Boosts.</strong> If a Boost of yours added buttons or changed how a site behaves, a userscript manager is the only real replacement. You&#39;ll be rewriting the script, not clicking.</p>
+<h2 id="how-to-move-your-arc-boosts-to-chrome-step-by-step">How to move your Arc Boosts to Chrome, step by step</h2>
+<p>This takes about five minutes per Boost. Do it before December 22, while Arc still opens.</p>
+<ol>
+<li><strong>List your Boosts.</strong> In Arc, open each site you boosted and open its Boost from the address bar. Note what it does: a color, a font, zapped elements, code.</li>
+<li><strong>Copy any CSS.</strong> If the Boost has code, open the Code tab and copy the CSS into a note. Copy the JavaScript too, if any, for later.</li>
+<li><strong>Install Pagic</strong> in Chrome (or Dia, Edge, Brave). Open the same site and click Pagic&#39;s icon. Click <strong>Customize this site</strong>, and the browser asks you to allow that one site.</li>
+<li><strong>Redo the colors.</strong> Drag the big dot on the color pad until the background looks right, and the small dot for the accent. Or click the moon for dark mode.</li>
+<li><strong>Redo the font.</strong> Click <strong>Aa</strong> and pick a font. Every font installed on your computer is listed, each shown in its own typeface.</li>
+<li><strong>Redo the zaps.</strong> Click <strong>Edit page</strong>, click the element you used to zap, and choose <strong>Hide</strong>. If it&#39;s one of many (posts in a feed, ads in a sidebar), choose <strong>Hide all like this</strong>, which also hides the ones the site adds later.</li>
+<li><strong>Paste the CSS.</strong> Turn on Code in Pagic&#39;s settings and paste the CSS from step 2.</li>
+</ol>
+<p>That&#39;s it. Next time you open the site, everything is there. Every change is listed under Changes, with a switch to turn it off and Undo, so nothing is permanent if you change your mind.</p>
+<figure class="post-shot"><img class="on-light" src="/assets/shots2/edit-light.webp" alt="Pagic's Edit page menu on an ad: Hide, Edit text, Resize, Move, Style" loading="lazy" decoding="async"><img class="on-dark" src="/assets/shots2/edit-dark.webp" alt="Pagic's Edit page menu on an ad: Hide, Edit text, Resize, Move, Style" loading="lazy" decoding="async"><figcaption>Edit page: click anything and hide it, like an Arc zap.</figcaption></figure>
+
+<h2 id="does-pagic-work-in-dia">Does Pagic work in Dia?</h2>
+<p>Dia is built on Chromium and installs extensions from the Chrome Web Store, so you can add Pagic to Dia the same way you would in Chrome. Pagic needs a Chromium 127 or newer browser, and I test it in Chrome and Helium. If something looks off in Dia, email me at <a href="mailto:support@pagic.dev">support@pagic.dev</a> and I&#39;ll look into it.</p>
+<h2 id="what-about-boosts-you-shared-or-installed-from-someone-else">What about Boosts you shared or installed from someone else?</h2>
+<p>Arc&#39;s shared Boosts were links that only Arc understood, so they stop working with Arc. If you had one installed, rebuild it the same way as your own (step 1 shows you what it does). In Pagic, a look can be exported as a file and imported by a friend, with its pictures and fonts, which covers the same &quot;here&#39;s my YouTube setup&quot; use. That&#39;s part of Pro.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<p><strong>Can I export my Arc Boosts?</strong> Not as a file Chrome understands. You can copy the CSS and JavaScript from each Boost&#39;s Code tab and rebuild colors, fonts and zaps by hand in another tool, which takes a few minutes per site.
+<strong>Does Dia have Boosts?</strong> No. Dia imports bookmarks, passwords, history, extensions and spaces from Arc, but not Boosts. A Chrome extension like Pagic or Stylus is the way to keep them in Dia.
+<strong>When does Arc stop working?</strong> Arc&#39;s desktop apps stop working on December 22, 2026, and new accounts are already closed. Import anything you want to keep before that date.
+<strong>Is there a free Arc Boosts alternative for Chrome?</strong> Yes. Pagic is free for one site at a time with every tool, and Stylus is free but needs you to write CSS.
+<strong>Can Pagic run JavaScript like Arc Boosts?</strong> No. Pagic changes pages with CSS and its own small script for rewritten text and notes, and never runs code you paste in. For JavaScript Boosts, use a userscript manager like Tampermonkey.</p>
+
+      </div>
+      <aside class="post-cta">
+  <img src="/assets/pagic.png" alt="" width="72" height="72" loading="lazy">
+  <div>
+    <p class="post-cta-title">Your Boosts, rebuilt in Chrome</p>
+    <p>Pagic does colors, fonts, zaps and custom CSS per site, in Chrome, Edge, Brave and Dia. Free for one site, with every tool.</p>
+    <a class="button button-small" href="https://chromewebstore.google.com/detail/pagic/lmpmkmabloeammjcjelokphkmaelokdp?utm_source=pagic.dev&utm_medium=blog&utm_campaign=arc-boosts-alternative-for-chrome" data-umami-event="Install" data-umami-event-post="arc-boosts-alternative-for-chrome">Add Pagic to Chrome</a>
+  </div>
+</aside>
+      <footer class="post-author">
+        <img src="/assets/pagic.png" alt="" width="56" height="56" loading="lazy">
+        <p>I'm Konstantin, and I make Pagic on my own: a Chrome extension for hiding, recoloring and marking up any website. I write these guides from the problems I ran into while building it. Questions or corrections: <a href="mailto:support@pagic.dev">support@pagic.dev</a>.</p>
+      </footer>
+      <nav class="post-related" aria-label="More from the blog"><p>Keep reading</p><ul><li><a href="/blog/best-chrome-extensions-to-customize-websites/">8 Best Chrome Extensions to Customize Websites (2026)</a></li><li><a href="/blog/how-to-customize-any-website/">How to Customize Any Website in Chrome (No Code)</a></li><li><a href="/blog/how-to-hide-youtube-shorts/">How to Hide YouTube Shorts on Desktop (For Good)</a></li></ul></nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <span>© 2026 Pagic</span>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Purchase terms</a>
+    <a href="/support/">Support</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Customize Any Website in Chrome (No Code) | Pagic</title>
+  <meta name="description" content="Hide clutter, change colors and fonts, add dark mode, move things around and leave notes on any website in Chrome, without code. A complete guide.">
+  <link rel="canonical" href="https://pagic.dev/blog/how-to-customize-any-website/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Konstantin Suvorov">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16141b" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/favicon-128.png">
+  <link rel="alternate" type="application/rss+xml" title="The Pagic blog" href="/blog/rss.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Pagic">
+  <meta property="og:url" content="https://pagic.dev/blog/how-to-customize-any-website/">
+  <meta property="og:title" content="How to Customize Any Website in Chrome (No Code)">
+  <meta property="og:description" content="Hide clutter, change colors and fonts, add dark mode, move things around and leave notes on any website in Chrome, without code. A complete guide.">
+  <meta property="og:image" content="https://pagic.dev/assets/shots2/hero-light.webp">
+  <meta property="article:published_time" content="2026-11-15">
+  <meta property="article:modified_time" content="2026-11-15">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Customize Any Website in Chrome (No Code)">
+  <meta name="twitter:description" content="Hide clutter, change colors and fonts, add dark mode, move things around and leave notes on any website in Chrome, without code. A complete guide.">
+  <meta name="twitter:image" content="https://pagic.dev/assets/shots2/hero-light.webp">
+  <script>try { const theme = localStorage.getItem("pagic-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}</script>
+  <link rel="preload" href="/assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Customize Any Website in Chrome (No Code)",
+    "description": "Hide clutter, change colors and fonts, add dark mode, move things around and leave notes on any website in Chrome, without code. A complete guide.",
+    "image": "https://pagic.dev/assets/shots2/hero-light.webp",
+    "datePublished": "2026-11-15",
+    "dateModified": "2026-11-15",
+    "author": {
+      "@type": "Person",
+      "name": "Konstantin Suvorov",
+      "url": "https://pagic.dev/about/",
+      "sameAs": [
+        "https://konsu.dev/",
+        "https://github.com/kosuvorov",
+        "https://www.linkedin.com/in/kosuvorov",
+        "https://www.youtube.com/@kosuvorov"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pagic",
+      "url": "https://pagic.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pagic.dev/assets/pagic.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://pagic.dev/blog/how-to-customize-any-website/"
+    },
+    "keywords": [
+      "customize any website",
+      "customize website chrome extension",
+      "change how a website looks",
+      "edit website appearance",
+      "personalize websites"
+    ],
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Pagic",
+      "applicationCategory": "BrowserApplication",
+      "url": "https://pagic.dev/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Pagic",
+        "item": "https://pagic.dev/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://pagic.dev/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Customize Any Website in Chrome (No Code)",
+        "item": "https://pagic.dev/blog/how-to-customize-any-website/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I customize a website without coding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Extensions like Pagic let you hide, recolor, restyle and annotate any page by clicking on it. You only need CSS if you want to, and Pagic has a Code box for that too."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my changes stay after I reload the page?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Pagic saves changes per site and applies them on every visit, until you switch them off or undo them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe to let an extension change websites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check what it can access. Pagic only runs on sites you allow, one at a time, has no account, and stores everything in your browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I share my customized look with a friend?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With Pagic Pro, export a preset as a file from the preset menu, and your friend imports it. Its pictures and fonts go along."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work on Edge, Brave, Arc and Dia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pagic works in Chrome and other browsers built on Chromium 127 or newer."
+        }
+      }
+    ]
+  }
+]
+  </script>
+  <script src="/config.js" defer></script>
+  <script src="/theme.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Pagic home">
+      <img src="/assets/wordmark-p.webp" alt="" width="140" height="200">
+      <span>agic</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="button button-small" href="/#get">Get Pagic</a>
+    </nav>
+  </header>
+  <main class="post" id="main">
+    <article>
+      <nav class="post-crumbs" aria-label="Breadcrumb"><a href="/">Pagic</a> <span aria-hidden="true">›</span> <a href="/blog/">Blog</a></nav>
+      <h1>How to Customize Any Website in Chrome (No Code)</h1>
+      <p class="post-meta">By <a href="/about/" rel="author">Konstantin Suvorov</a>, who makes Pagic · <time datetime="2026-11-15">15 November 2026</time> · 6 min read</p>
+      <nav class="post-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#what-does-customizing-a-website-actually-mean">What does &quot;customizing a website&quot; actually mean?</a></li><li><a href="#the-six-kinds-of-changes-and-when-you-want-each">The six kinds of changes (and when you want each)</a></li><li><a href="#how-your-changes-are-saved">How your changes are saved</a></li><li><a href="#does-customizing-a-website-change-it-for-other-people">Does customizing a website change it for other people?</a></li><li><a href="#what-can-39-t-you-customize">What can&#39;t you customize?</a></li><li><a href="#which-tool-should-you-use">Which tool should you use?</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li></ol></nav>
+      <div class="post-body">
+<p>You can customize any website in Chrome with an extension that changes the page in your own browser and remembers it per site. With Pagic you click an element to hide it, drag a color pad to recolor the page, turn on dark mode, pick a font, and add highlights and sticky notes, all without code. The site stays the same for everyone else. This guide covers every kind of change, and how to keep each one.</p>
+<h2 id="what-does-customizing-a-website-actually-mean">What does &quot;customizing a website&quot; actually mean?</h2>
+<p>Customizing a website means changing how it looks and reads for you, without touching the site itself. Your browser downloads the page, and an extension adjusts it before you see it: some parts hidden, some colors changed, a different font, your own notes on top.</p>
+<p>Nobody else sees it. The site&#39;s owner doesn&#39;t know. And the important part: a good tool saves your changes per site and puts them back every time you visit, so you do it once.</p>
+<p>People have done this for years with user styles (CSS files you write yourself) and ad blocker element pickers. Arc made it mainstream with Boosts, a small panel per site. Arc is shutting down on December 22, 2026, which is one reason I wrote this guide. If that&#39;s you, start with the <a href="/blog/arc-boosts-alternative-for-chrome/">Arc Boosts alternative guide</a>.</p>
+<h2 id="the-six-kinds-of-changes-and-when-you-want-each">The six kinds of changes (and when you want each)</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Change</th>
+<th>What it fixes</th>
+<th>In Pagic</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Hide</strong></td>
+<td>Ads, pop-ups, feeds, sidebars, Shorts, cookie banners</td>
+<td>Edit page → click → Hide</td>
+</tr>
+<tr>
+<td><strong>Colors</strong></td>
+<td>Glaring white pages, ugly themes, sites without dark mode</td>
+<td>Color pad, the moon</td>
+</tr>
+<tr>
+<td><strong>Text</strong></td>
+<td>Tiny text, hard-to-read fonts, cramped lines</td>
+<td>Aa: font, spacing, width</td>
+</tr>
+<tr>
+<td><strong>Rearrange</strong></td>
+<td>The thing you need is at the bottom</td>
+<td>Edit page → Move, Resize</td>
+</tr>
+<tr>
+<td><strong>Mark up</strong></td>
+<td>You want to remember why you saved this page</td>
+<td>Markup: highlighter, notes, pen</td>
+</tr>
+<tr>
+<td><strong>Read</strong></td>
+<td>You just want the article</td>
+<td>Reader</td>
+</tr>
+</tbody></table></div>
+<h3>1. Hide anything on a page</h3>
+<p>Hiding is the change people make first. Open <strong>Edit page</strong>, click the thing you don&#39;t want, and choose <strong>Hide</strong>. Pagic picks the smallest meaningful thing under your pointer (a post, a sidebar, a banner), not a random invisible box, and the page closes the gap it left.</p>
+<p>Two tricks make it stick on busy sites:</p>
+<ul>
+<li><strong>Hide all like this</strong> hides every matching item, including ones the site loads later. It&#39;s how you get rid of every promoted post in a feed, not just the first.</li>
+<li><strong>Drag across the page</strong> in Hide mode to pick several things at once, then press Enter.</li>
+</ul>
+<p>I wrote step-by-step guides for the most common ones: <a href="/blog/how-to-hide-youtube-shorts/">YouTube Shorts</a>, the LinkedIn feed, and any element on any site.</p>
+<h3>2. Change a website&#39;s colors or add dark mode</h3>
+<p>The color pad has two dots. Drag the big one to tint the page (whites become a pale shade of your color, blacks a deep one), and the small one to change the site&#39;s accent color. Pagic finds the site&#39;s own accent, like YouTube&#39;s red, and turns it into yours.</p>
+<p>The moon turns on dark mode, even on sites that never had one. Click it again for <strong>Auto</strong>, which follows your system: dark at night, light in the day. Photos and videos keep their real colors either way, which is the part most dark mode tools get wrong. More in <a href="/blog/dark-mode-for-any-website/">how to get dark mode on any website</a>.</p>
+<figure class="post-shot"><img class="on-light" src="/assets/shots2/colors-light.webp" alt="Pagic's panel with the two-dot color pad and buttons for hiding, dark mode, fonts and notes" loading="lazy" decoding="async"><img class="on-dark" src="/assets/shots2/colors-dark.webp" alt="Pagic's panel with the two-dot color pad and buttons for hiding, dark mode, fonts and notes" loading="lazy" decoding="async"><figcaption>The color pad: the big dot tints the page, the small dot changes its accent.</figcaption></figure>
+
+<p>For precise work, <strong>Colors</strong> on the Edit page lists every color the page uses. Click one and change it everywhere it appears: text, backgrounds, borders and icons.</p>
+<h3>3. Change the font, size and spacing</h3>
+<p>Click <strong>Aa</strong>. You get four quick picks and a list of every font installed on your computer, each shown in its own typeface. You can add a font from a file too, including OpenDyslexic. Under the fonts, sliders change line spacing, letter spacing, paragraph spacing and text width for the running text, while buttons and menus keep their own look.</p>
+<h3>4. Move, resize and restyle things</h3>
+<p>On the Edit page, <strong>Move</strong> lets you drag a widget up a sidebar or a link along a menu, and <strong>Size</strong> lets you make a small search box bigger. <strong>Style</strong> adds text and fill colors, a ring, rounded corners, greyscale, dim, or blur. Blur has a handy mode: <strong>Blur until hover</strong>, which keeps spoilers and comments blurred until you point at them.</p>
+<p>You can also edit any text on the page (click it, type, Enter), or replace a picture, a logo for example, with one of your own.</p>
+<h3>5. Highlight, draw and leave notes</h3>
+<p><strong>Markup</strong> puts a highlighter, underlines, a black marker, a pen, arrows, shapes and sticky notes on any page. The part that matters: they stay. A highlight belongs to its words, so it&#39;s still there when the page reloads or reflows, and a sticky note follows the element it&#39;s stuck to.</p>
+<p>There&#39;s also a laser pointer and a spotlight for when you&#39;re sharing your screen.</p>
+<h3>6. Read without the page around it</h3>
+<p><strong>Reader</strong> turns an article into a clean page: the title, the pictures and the text, in your font, size and theme. Open it from Pagic or with <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>. Reader is free on every site.</p>
+<h2 id="how-your-changes-are-saved">How your changes are saved</h2>
+<p>Every change goes into a preset for that site and comes back on every visit. You don&#39;t press save. Each change is listed under <strong>Changes</strong>, where you can switch any of them off and on, or undo it, and ⌘Z undoes the last one. Holding the eye button shows you the page without Pagic, for a quick before and after.</p>
+<p>With Pro, a site can have several presets (&quot;Reading&quot;, &quot;Night&quot;, &quot;Focus&quot;) and you switch in a click. A preset can apply only to some pages of a site, like YouTube&#39;s <code>/watch</code> pages, or only while your system is in dark mode.</p>
+<h2 id="does-customizing-a-website-change-it-for-other-people">Does customizing a website change it for other people?</h2>
+<p>No. Everything happens in your browser. The website, and what everyone else sees, stays exactly the same. Pagic starts with access to no websites, asks for each site you customize, and stores your changes in your browser. There&#39;s no account.</p>
+<h2 id="what-can-39-t-you-customize">What can&#39;t you customize?</h2>
+<p>Browsers don&#39;t let any extension change their own pages: the New Tab page, settings, and the Chrome Web Store. And when a site redesigns itself, a change might point at something that no longer exists. Pagic marks those changes &quot;not here&quot;, and you make them again in a click.</p>
+<h2 id="which-tool-should-you-use">Which tool should you use?</h2>
+<p>If you want one specific fix, a single-purpose extension is fine: Dark Reader for dark mode, Unhook for YouTube, a feed blocker for social sites. If you know CSS, Stylus is free and powerful. If you want to change anything you see by clicking on it, and keep it, that&#39;s what Pagic is for. I compared the options in <a href="/blog/best-chrome-extensions-to-customize-websites/">the best Chrome extensions to customize websites</a>.</p>
+<aside class="post-cta">
+  <img src="/assets/pagic.png" alt="" width="72" height="72" loading="lazy">
+  <div>
+    <p class="post-cta-title">Start with the site that annoys you most</p>
+    <p>Pagic is free for one site at a time, with every tool. Reader is free everywhere.</p>
+    <a class="button button-small" href="https://chromewebstore.google.com/detail/pagic/lmpmkmabloeammjcjelokphkmaelokdp?utm_source=pagic.dev&utm_medium=blog&utm_campaign=how-to-customize-any-website" data-umami-event="Install" data-umami-event-post="how-to-customize-any-website">Add Pagic to Chrome</a>
+  </div>
+</aside>
+
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<p><strong>Can I customize a website without coding?</strong> Yes. Extensions like Pagic let you hide, recolor, restyle and annotate any page by clicking on it. You only need CSS if you want to, and Pagic has a Code box for that too.
+<strong>Will my changes stay after I reload the page?</strong> Yes. Pagic saves changes per site and applies them on every visit, until you switch them off or undo them.
+<strong>Is it safe to let an extension change websites?</strong> Check what it can access. Pagic only runs on sites you allow, one at a time, has no account, and stores everything in your browser.
+<strong>Can I share my customized look with a friend?</strong> With Pagic Pro, export a preset as a file from the preset menu, and your friend imports it. Its pictures and fonts go along.
+<strong>Does it work on Edge, Brave, Arc and Dia?</strong> Pagic works in Chrome and other browsers built on Chromium 127 or newer.</p>
+
+      </div>
+      <aside class="post-cta">
+  <img src="/assets/pagic.png" alt="" width="72" height="72" loading="lazy">
+  <div>
+    <p class="post-cta-title">Make the page yours</p>
+    <p>Pagic is a free Chrome extension: hide anything, pick your colors, leave notes, and it stays that way every visit.</p>
+    <a class="button button-small" href="https://chromewebstore.google.com/detail/pagic/lmpmkmabloeammjcjelokphkmaelokdp?utm_source=pagic.dev&utm_medium=blog&utm_campaign=how-to-customize-any-website" data-umami-event="Install" data-umami-event-post="how-to-customize-any-website">Add Pagic to Chrome</a>
+  </div>
+</aside>
+      <footer class="post-author">
+        <img src="/assets/pagic.png" alt="" width="56" height="56" loading="lazy">
+        <p>I'm Konstantin, and I make Pagic on my own: a Chrome extension for hiding, recoloring and marking up any website. I write these guides from the problems I ran into while building it. Questions or corrections: <a href="mailto:support@pagic.dev">support@pagic.dev</a>.</p>
+      </footer>
+      <nav class="post-related" aria-label="More from the blog"><p>Keep reading</p><ul><li><a href="/blog/best-chrome-extensions-to-customize-websites/">8 Best Chrome Extensions to Customize Websites (2026)</a></li><li><a href="/blog/arc-boosts-alternative-for-chrome/">Arc Boosts Alternative: Keep Your Boosts After Arc Shuts Down</a></li><li><a href="/blog/how-to-hide-youtube-shorts/">How to Hide YouTube Shorts on Desktop (For Good)</a></li></ul></nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <span>© 2026 Pagic</span>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Purchase terms</a>
+    <a href="/support/">Support</a>
+  </footer>
+</body>
+</html>

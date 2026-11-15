@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Get Dark Mode on Any Website in Chrome | Pagic</title>
+  <meta name="description" content="Three ways to force dark mode on every website in Chrome: the hidden flag, Dark Reader, and Pagic. Which keeps photos right, and how to set it per site.">
+  <link rel="canonical" href="https://pagic.dev/blog/dark-mode-for-any-website/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Konstantin Suvorov">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16141b" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/favicon-128.png">
+  <link rel="alternate" type="application/rss+xml" title="The Pagic blog" href="/blog/rss.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Pagic">
+  <meta property="og:url" content="https://pagic.dev/blog/dark-mode-for-any-website/">
+  <meta property="og:title" content="How to Get Dark Mode on Any Website in Chrome">
+  <meta property="og:description" content="Three ways to force dark mode on every website in Chrome: the hidden flag, Dark Reader, and Pagic. Which keeps photos right, and how to set it per site.">
+  <meta property="og:image" content="https://pagic.dev/assets/shots2/hero-dark.webp">
+  <meta property="article:published_time" content="2026-11-15">
+  <meta property="article:modified_time" content="2026-11-15">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Get Dark Mode on Any Website in Chrome">
+  <meta name="twitter:description" content="Three ways to force dark mode on every website in Chrome: the hidden flag, Dark Reader, and Pagic. Which keeps photos right, and how to set it per site.">
+  <meta name="twitter:image" content="https://pagic.dev/assets/shots2/hero-dark.webp">
+  <script>try { const theme = localStorage.getItem("pagic-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}</script>
+  <link rel="preload" href="/assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Get Dark Mode on Any Website in Chrome",
+    "description": "Three ways to force dark mode on every website in Chrome: the hidden flag, Dark Reader, and Pagic. Which keeps photos right, and how to set it per site.",
+    "image": "https://pagic.dev/assets/shots2/hero-dark.webp",
+    "datePublished": "2026-11-15",
+    "dateModified": "2026-11-15",
+    "author": {
+      "@type": "Person",
+      "name": "Konstantin Suvorov",
+      "url": "https://pagic.dev/about/",
+      "sameAs": [
+        "https://konsu.dev/",
+        "https://github.com/kosuvorov",
+        "https://www.linkedin.com/in/kosuvorov",
+        "https://www.youtube.com/@kosuvorov"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pagic",
+      "url": "https://pagic.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pagic.dev/assets/pagic.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://pagic.dev/blog/dark-mode-for-any-website/"
+    },
+    "keywords": [
+      "dark mode for any website",
+      "chrome dark mode all websites",
+      "force dark mode chrome",
+      "dark mode extension",
+      "dark theme for websites"
+    ],
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Pagic",
+      "applicationCategory": "BrowserApplication",
+      "url": "https://pagic.dev/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Pagic",
+        "item": "https://pagic.dev/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://pagic.dev/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Get Dark Mode on Any Website in Chrome",
+        "item": "https://pagic.dev/blog/dark-mode-for-any-website/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I make every website dark in Chrome?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Turn on the Auto Dark Mode for Web Contents flag in chrome://flags for every site at once, or use an extension like Dark Reader. For per-site dark mode alongside other changes, use Pagic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does dark mode on websites save battery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On OLED screens, darker pixels use less power, so it can help. On LCD screens the difference is small."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do photos look wrong with some dark mode extensions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simple dark modes invert everything, including images. Pagic corrects images and videos back to their real colors after darkening the page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get dark mode in Google Docs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google's mobile apps follow your system's dark mode, but in a desktop browser the page you type on stays white. Pagic's dark mode handles Docs and Sheets specially so the page goes dark and the text light."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a dark mode that turns on only at night?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Pagic's Auto mode follows your system's appearance, so if your computer switches to dark at sunset, the site does too."
+        }
+      }
+    ]
+  }
+]
+  </script>
+  <script src="/config.js" defer></script>
+  <script src="/theme.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Pagic home">
+      <img src="/assets/wordmark-p.webp" alt="" width="140" height="200">
+      <span>agic</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="button button-small" href="/#get">Get Pagic</a>
+    </nav>
+  </header>
+  <main class="post" id="main">
+    <article>
+      <nav class="post-crumbs" aria-label="Breadcrumb"><a href="/">Pagic</a> <span aria-hidden="true">›</span> <a href="/blog/">Blog</a></nav>
+      <h1>How to Get Dark Mode on Any Website in Chrome</h1>
+      <p class="post-meta">By <a href="/about/" rel="author">Konstantin Suvorov</a>, who makes Pagic · <time datetime="2026-11-15">15 November 2026</time> · 5 min read</p>
+      <nav class="post-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#why-doesn-39-t-chrome-39-s-dark-mode-darken-websites">Why doesn&#39;t Chrome&#39;s dark mode darken websites?</a></li><li><a href="#option-1-chrome-39-s-dark-mode-flag">Option 1: Chrome&#39;s dark mode flag</a></li><li><a href="#option-2-dark-reader">Option 2: Dark Reader</a></li><li><a href="#option-3-pagic">Option 3: Pagic</a></li><li><a href="#which-one-should-you-use">Which one should you use?</a></li><li><a href="#how-to-set-dark-mode-for-just-one-site">How to set dark mode for just one site</a></li><li><a href="#can-you-make-a-site-any-color-not-just-dark">Can you make a site any color, not just dark?</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li></ol></nav>
+      <div class="post-body">
+<p>To get dark mode on any website in Chrome, you have three options: Chrome&#39;s hidden &quot;Auto Dark Mode for Web Contents&quot; flag, which darkens every site with no settings; a dark mode extension like Dark Reader; or Pagic, which adds dark mode per site with an Auto mode that follows your system and keeps photos in their real colors. Here&#39;s how each works, and which one I&#39;d pick for what.</p>
+<h2 id="why-doesn-39-t-chrome-39-s-dark-mode-darken-websites">Why doesn&#39;t Chrome&#39;s dark mode darken websites?</h2>
+<p>Chrome&#39;s own dark theme only changes Chrome: the tabs, the menus, the New Tab page. Websites decide their own colors. Sites that support dark mode read your system setting and switch. Plenty of sites never added it, so you get a dark browser around a glaring white page at night.</p>
+<p>To darken those, something has to recolor the page for you.</p>
+<h2 id="option-1-chrome-39-s-dark-mode-flag">Option 1: Chrome&#39;s dark mode flag</h2>
+<p>Chrome has an experimental setting that darkens every website.</p>
+<ol>
+<li>Type <code>chrome://flags</code> in the address bar.</li>
+<li>Search for <strong>Auto Dark Mode for Web Contents</strong>.</li>
+<li>Set it to <strong>Enabled</strong> and click <strong>Relaunch</strong>.</li>
+</ol>
+<p><strong>Good:</strong> free, built in, nothing to install. <strong>Not so good:</strong> it&#39;s all or nothing. There&#39;s no per-site switch, no brightness or contrast, and it applies to sites that already had a nice dark theme. Results vary a lot from site to site, and flags can change or disappear between Chrome versions.</p>
+<h2 id="option-2-dark-reader">Option 2: Dark Reader</h2>
+<p>Dark Reader is the best-known dark mode extension, open source and around for years. It generates a dark theme for every site, with sliders for brightness, contrast and sepia, and you can turn it on for all sites or only some.</p>
+<p><strong>Good:</strong> detailed control, works on most sites, a big community writing fixes for tricky ones. <strong>Not so good:</strong> it does one thing. If you also want to hide parts of a page, change fonts or recolor a site in something other than dark, that&#39;s more extensions.</p>
+<h2 id="option-3-pagic">Option 3: Pagic</h2>
+<p>Pagic&#39;s moon button turns on dark mode for the site you&#39;re on, as part of a bigger toolkit for making a site yours.</p>
+<ul>
+<li><strong>Click once</strong> for dark mode. <strong>Click again for Auto</strong>, which follows your system: dark only while your Mac or PC is in dark mode. If your system switches at sunset, so does the site.</li>
+<li><strong>Darkness</strong> softens it. At 100% white becomes black. Lower makes it a dark gray instead. It starts at 95%.</li>
+<li><strong>Photos and videos keep their real colors</strong> and contrast, at any Darkness. Pagic applies the exact opposite correction to images and videos, so a photo of a red car stays a red car.</li>
+<li><strong>Google Docs and Sheets</strong> get a real dark page. They draw their pages as pictures, which most dark mode tools either skip or turn into a negative, so Pagic handles them specially: the paper goes dark and the words go light.</li>
+</ul>
+<p>It also reaches pop-up dialogs and fullscreen video, which the browser draws above the page.</p>
+<figure class="post-shot"><img src="/assets/shots2/dark.webp" alt="A news article in Pagic's dark mode, with its photo unchanged" loading="lazy" decoding="async"><figcaption>Dark mode on a site that doesn't have one. The photo keeps its colors.</figcaption></figure>
+
+<h2 id="which-one-should-you-use">Which one should you use?</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Chrome flag</th>
+<th>Dark Reader</th>
+<th>Pagic</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Per-site on/off</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Follows system dark/light</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes (Auto)</td>
+</tr>
+<tr>
+<td>Photos keep their colors</td>
+<td>Mostly</td>
+<td>Mostly</td>
+<td>Yes, corrected exactly</td>
+</tr>
+<tr>
+<td>Google Docs and Sheets</td>
+<td>Varies</td>
+<td>Varies</td>
+<td>Handled specially</td>
+</tr>
+<tr>
+<td>Softer, gray dark</td>
+<td>No</td>
+<td>Yes (brightness)</td>
+<td>Yes (Darkness)</td>
+</tr>
+<tr>
+<td>Also hides, recolors, fonts</td>
+<td>No</td>
+<td>Fonts only</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Free</td>
+<td>Free</td>
+<td>Free for one site</td>
+</tr>
+</tbody></table></div>
+<p>If you want every site dark and nothing else, Dark Reader is a great pick. If the reason you want dark mode is &quot;this site is hard on my eyes at night&quot;, it&#39;s usually not the only thing wrong with that site. That&#39;s where Pagic fits: dark mode, and the sidebar gone, and a bigger font, saved together.</p>
+<h2 id="how-to-set-dark-mode-for-just-one-site">How to set dark mode for just one site</h2>
+<p>In Pagic, everything you do is saved for the site you&#39;re on. So dark mode on Hacker News doesn&#39;t touch Wikipedia. I keep Hacker News dark all the time and Wikipedia light, in a different font.</p>
+<p>If you want a site dark only at night, use <strong>Auto</strong> on the moon. With Pagic Pro you can go further: a preset can apply only while your system is dark, so a site can have a full &quot;night&quot; look (dark, bigger text, sidebar hidden) that takes over by itself when your system turns dark.</p>
+<h2 id="can-you-make-a-site-any-color-not-just-dark">Can you make a site any color, not just dark?</h2>
+<p>Yes. Pagic&#39;s color pad tints the whole page to any hue: drag the big dot and whites become a pale shade of that color, blacks a deep one. It&#39;s how you get a warm sepia page for reading, or a mint one because you like mint. There&#39;s also greyscale, and with the big dot it becomes a one-color look in any hue.</p>
+<aside class="post-cta">
+  <img src="/assets/pagic.png" alt="" width="72" height="72" loading="lazy">
+  <div>
+    <p class="post-cta-title">Try dark mode on one site</p>
+    <p>Pagic is free for one site at a time, with every tool. No account.</p>
+    <a class="button button-small" href="https://chromewebstore.google.com/detail/pagic/lmpmkmabloeammjcjelokphkmaelokdp?utm_source=pagic.dev&utm_medium=blog&utm_campaign=dark-mode-for-any-website" data-umami-event="Install" data-umami-event-post="dark-mode-for-any-website">Add Pagic to Chrome</a>
+  </div>
+</aside>
+
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<p><strong>How do I make every website dark in Chrome?</strong> Turn on the Auto Dark Mode for Web Contents flag in chrome://flags for every site at once, or use an extension like Dark Reader. For per-site dark mode alongside other changes, use Pagic.
+<strong>Does dark mode on websites save battery?</strong> On OLED screens, darker pixels use less power, so it can help. On LCD screens the difference is small.
+<strong>Why do photos look wrong with some dark mode extensions?</strong> Simple dark modes invert everything, including images. Pagic corrects images and videos back to their real colors after darkening the page.
+<strong>Can I get dark mode in Google Docs?</strong> Google&#39;s mobile apps follow your system&#39;s dark mode, but in a desktop browser the page you type on stays white. Pagic&#39;s dark mode handles Docs and Sheets specially so the page goes dark and the text light.
+<strong>Is there a dark mode that turns on only at night?</strong> Yes. Pagic&#39;s Auto mode follows your system&#39;s appearance, so if your computer switches to dark at sunset, the site does too.</p>
+
+      </div>
+      <aside class="post-cta">
+  <img src="/assets/pagic.png" alt="" width="72" height="72" loading="lazy">
+  <div>
+    <p class="post-cta-title">Dark mode that leaves your photos alone</p>
+    <p>Pagic's moon turns on dark mode for any site, with Auto to follow your system and Darkness to soften it. Free for one site.</p>
+    <a class="button button-small" href="https://chromewebstore.google.com/detail/pagic/lmpmkmabloeammjcjelokphkmaelokdp?utm_source=pagic.dev&utm_medium=blog&utm_campaign=dark-mode-for-any-website" data-umami-event="Install" data-umami-event-post="dark-mode-for-any-website">Add Pagic to Chrome</a>
+  </div>
+</aside>
+      <footer class="post-author">
+        <img src="/assets/pagic.png" alt="" width="56" height="56" loading="lazy">
+        <p>I'm Konstantin, and I make Pagic on my own: a Chrome extension for hiding, recoloring and marking up any website. I write these guides from the problems I ran into while building it. Questions or corrections: <a href="mailto:support@pagic.dev">support@pagic.dev</a>.</p>
+      </footer>
+      <nav class="post-related" aria-label="More from the blog"><p>Keep reading</p><ul><li><a href="/blog/how-to-customize-any-website/">How to Customize Any Website in Chrome (No Code)</a></li><li><a href="/blog/best-chrome-extensions-to-customize-websites/">8 Best Chrome Extensions to Customize Websites (2026)</a></li><li><a href="/blog/how-to-hide-youtube-shorts/">How to Hide YouTube Shorts on Desktop (For Good)</a></li></ul></nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <span>© 2026 Pagic</span>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Purchase terms</a>
+    <a href="/support/">Support</a>
+  </footer>
+</body>
+</html>

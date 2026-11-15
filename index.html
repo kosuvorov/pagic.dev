@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pagic - Make the internet yours again</title>
-  <meta name="description" content="Pagic is a browser extension that hides the clutter, recolors and marks up any website. Read without distractions, leave notes, and Pagic remembers it on every visit.">
+  <title>Pagic - Customize any website: hide clutter, dark mode, notes</title>
+  <meta name="description" content="Pagic is a Chrome extension that customizes any website: hide clutter and YouTube Shorts, add dark mode, new colors and fonts, and notes, saved per site.">
   <link rel="canonical" href="https://pagic.dev/">
+  <link rel="alternate" type="application/rss+xml" title="The Pagic blog" href="/blog/rss.xml">
   <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#16141b" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
@@ -26,16 +27,154 @@
   <link rel="preload" href="assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
+[
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": "https://pagic.dev/#app",
     "name": "Pagic",
     "applicationCategory": "BrowserApplication",
-    "operatingSystem": "Chrome, Chromium browsers",
-    "description": "Hide the clutter, recolor and mark up any website. Read without distractions, leave notes, and Pagic remembers it on every visit.",
+    "applicationSubCategory": "Browser extension",
+    "operatingSystem": "Chrome, Edge, Brave, Arc and other Chromium browsers",
+    "description": "A Chrome extension that customizes any website without code: hide anything, recolor or add dark mode, change fonts, highlight and leave notes, and read in a clean Reader. Changes are saved per site.",
     "url": "https://pagic.dev/",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "installUrl": "https://chromewebstore.google.com/detail/pagic/lmpmkmabloeammjcjelokphkmaelokdp",
+    "downloadUrl": "https://chromewebstore.google.com/detail/pagic/lmpmkmabloeammjcjelokphkmaelokdp",
+    "image": "https://pagic.dev/assets/social-card.png",
+    "softwareVersion": "2.0",
+    "featureList": [
+      "Hide any element on a website, permanently",
+      "Dark mode for any website",
+      "Recolor websites and change fonts",
+      "Highlights and sticky notes that stay on the page",
+      "Reader mode",
+      "Custom CSS",
+      "Presets per site, for some pages or for dark mode"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free for one site at a time, with every tool"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Konstantin Suvorov",
+      "url": "https://pagic.dev/about/"
+    },
+    "publisher": {
+      "@id": "https://pagic.dev/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://pagic.dev/#organization",
+    "name": "Pagic",
+    "url": "https://pagic.dev/",
+    "logo": "https://pagic.dev/assets/pagic.png",
+    "email": "support@pagic.dev",
+    "sameAs": [
+      "https://chromewebstore.google.com/detail/pagic/lmpmkmabloeammjcjelokphkmaelokdp"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://pagic.dev/#website",
+    "name": "Pagic",
+    "url": "https://pagic.dev/",
+    "publisher": {
+      "@id": "https://pagic.dev/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which browsers does it work in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Chrome, and browsers built on Chromium 127 or newer, like Edge, Brave, Arc and Helium."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will other people see my changes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Pagic only changes how a site looks in your own browser. The site itself, and what everyone else sees, stays the same."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to know how to code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at all. You click things and pick colors. If you do know CSS, you can switch on Code in Pagic's settings and add your own."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get the original site back?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Always. Every change is listed in Pagic, with a switch to turn it off or a button to remove it, and ⌘Z undoes the last one. The big switch at the top turns Pagic off for that site. Your presets stay saved either way."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between Free and Pro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Free has every tool, on one site at a time, and Reader everywhere. Pro customizes every site at once and adds presets: several looks per site, looks for some pages or for dark mode, and sharing them as files."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work on every site?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On regular websites, yes. Browsers don't let any extension change their own pages, like the New Tab page, settings, or the Web Store. When a site redesigns itself, a change may need a quick touch-up."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What can Pagic see?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only the sites you let it customize, and it asks for each one. Everything it saves stays in your browser. See the privacy policy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the AI helper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Turn on Ask in Pagic's settings, describe a change (\"make the comments smaller\"), and Claude or ChatGPT makes it as a draft you keep or throw away. It's optional, uses your own API key, and only sends anything when you ask."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I share my look with a friend?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with Pro. Choose Export as a file in the preset menu, and they add it with Import from a file. Its pictures and fonts go along."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I cancel Pro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In your Polar customer portal, any time. See support for help with licenses."
+        }
+      }
+    ]
   }
+]
   </script>
   <script src="config.js" defer></script>
   <script src="theme.js" defer></script>
@@ -51,6 +190,7 @@
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
+      <a href="/blog/">Blog</a>
       <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">
         <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
         <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
@@ -361,6 +501,8 @@
 
   <footer class="site-footer">
     <span>© <span data-year>2026</span> Pagic</span>
+    <a href="blog/">Blog</a>
+    <a href="about/">About</a>
     <a href="privacy/">Privacy</a>
     <a href="terms/">Purchase terms</a>
     <a href="support/">Support</a>

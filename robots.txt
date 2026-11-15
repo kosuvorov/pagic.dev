@@ -1,4 +1,55 @@
 User-agent: *
 Allow: /
+Disallow: /blog-src/
+Disallow: /scripts/
+
+# AI answer engines are welcome
+User-agent: GPTBot
+Allow: /
+Disallow: /blog-src/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /blog-src/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /blog-src/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /blog-src/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /blog-src/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /blog-src/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /blog-src/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /blog-src/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /blog-src/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /blog-src/
+
+User-agent: CCBot
+Allow: /
+Disallow: /blog-src/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /blog-src/
 
 Sitemap: https://pagic.dev/sitemap.xml
