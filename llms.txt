@@ -26,6 +26,7 @@ Key facts:
 
 ## Guides
 
+- [Does Dia Have Boosts? What Arc Users Should Know](https://pagic.dev/blog/does-dia-have-boosts/): Dia doesn't have Arc's Boosts and can't import them. Here's what moves from Arc to Dia, what doesn't, and how to get Boosts back in Dia with an extension.
 - [How to Hide YouTube Shorts on Desktop (For Good)](https://pagic.dev/blog/how-to-hide-youtube-shorts/): YouTube has no off switch for Shorts on desktop. Here's how to hide the Shorts shelf, tab and search results in Chrome, and keep them hidden every visit.
 - [How to Customize Any Website in Chrome (No Code)](https://pagic.dev/blog/how-to-customize-any-website/): Hide clutter, change colors and fonts, add dark mode, move things around and leave notes on any website in Chrome, without code. A complete guide.
 - [How to Get Dark Mode on Any Website in Chrome](https://pagic.dev/blog/dark-mode-for-any-website/): Three ways to force dark mode on every website in Chrome: the hidden flag, Dark Reader, and Pagic. Which keeps photos right, and how to set it per site.
