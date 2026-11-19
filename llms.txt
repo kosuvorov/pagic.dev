@@ -26,6 +26,7 @@ Key facts:
 
 ## Guides
 
+- [How to Get Dark Mode in Google Docs and Sheets (Desktop)](https://pagic.dev/blog/google-docs-dark-mode/): Google Docs and Sheets stay white in a desktop browser, even with Chrome in dark mode. Here's how to get a real dark page, and why most dark modes break it.
 - [Does Dia Have Boosts? What Arc Users Should Know](https://pagic.dev/blog/does-dia-have-boosts/): Dia doesn't have Arc's Boosts and can't import them. Here's what moves from Arc to Dia, what doesn't, and how to get Boosts back in Dia with an extension.
 - [How to Hide YouTube Shorts on Desktop (For Good)](https://pagic.dev/blog/how-to-hide-youtube-shorts/): YouTube has no off switch for Shorts on desktop. Here's how to hide the Shorts shelf, tab and search results in Chrome, and keep them hidden every visit.
 - [How to Customize Any Website in Chrome (No Code)](https://pagic.dev/blog/how-to-customize-any-website/): Hide clutter, change colors and fonts, add dark mode, move things around and leave notes on any website in Chrome, without code. A complete guide.

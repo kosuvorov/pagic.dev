@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Get Dark Mode in Google Docs and Sheets (Desktop)</title>
+  <meta name="description" content="Google Docs and Sheets stay white in a desktop browser, even with Chrome in dark mode. Here's how to get a real dark page, and why most dark modes break it.">
+  <link rel="canonical" href="https://pagic.dev/blog/google-docs-dark-mode/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Konstantin Suvorov">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16141b" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/favicon-128.png">
+  <link rel="alternate" type="application/rss+xml" title="The Pagic blog" href="/blog/rss.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Pagic">
+  <meta property="og:url" content="https://pagic.dev/blog/google-docs-dark-mode/">
+  <meta property="og:title" content="How to Get Dark Mode in Google Docs and Sheets (Desktop)">
+  <meta property="og:description" content="Google Docs and Sheets stay white in a desktop browser, even with Chrome in dark mode. Here's how to get a real dark page, and why most dark modes break it.">
+  <meta property="og:image" content="https://pagic.dev/assets/shots2/dark.webp">
+  <meta property="article:published_time" content="2026-11-19">
+  <meta property="article:modified_time" content="2026-11-19">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Get Dark Mode in Google Docs and Sheets (Desktop)">
+  <meta name="twitter:description" content="Google Docs and Sheets stay white in a desktop browser, even with Chrome in dark mode. Here's how to get a real dark page, and why most dark modes break it.">
+  <meta name="twitter:image" content="https://pagic.dev/assets/shots2/dark.webp">
+  <script>try { const theme = localStorage.getItem("pagic-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}</script>
+  <link rel="preload" href="/assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Get Dark Mode in Google Docs and Sheets (Desktop)",
+    "description": "Google Docs and Sheets stay white in a desktop browser, even with Chrome in dark mode. Here's how to get a real dark page, and why most dark modes break it.",
+    "image": "https://pagic.dev/assets/shots2/dark.webp",
+    "datePublished": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "author": {
+      "@type": "Person",
+      "name": "Konstantin Suvorov",
+      "url": "https://pagic.dev/about/",
+      "sameAs": [
+        "https://konsu.dev/",
+        "https://github.com/kosuvorov",
+        "https://www.linkedin.com/in/kosuvorov",
+        "https://www.youtube.com/@kosuvorov"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pagic",
+      "url": "https://pagic.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pagic.dev/assets/pagic.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://pagic.dev/blog/google-docs-dark-mode/"
+    },
+    "keywords": [
+      "google docs dark mode",
+      "google sheets dark mode",
+      "dark mode google docs desktop",
+      "google docs dark mode chrome",
+      "dark mode for google docs"
+    ],
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Pagic",
+      "applicationCategory": "BrowserApplication",
+      "url": "https://pagic.dev/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Pagic",
+        "item": "https://pagic.dev/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://pagic.dev/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Get Dark Mode in Google Docs and Sheets (Desktop)",
+        "item": "https://pagic.dev/blog/google-docs-dark-mode/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is there an official Google Docs dark mode on desktop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google's mobile apps follow your system's dark mode, but in a desktop browser the page you write on stays white. You need an extension or Chrome's dark mode flag."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I make Google Sheets dark?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The same way as Docs. With Pagic, dark mode on docs.google.com covers both Docs and Sheets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will dark mode mess up the colors in my document?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With Pagic, no. Text colors are adjusted for the dark page, and pictures keep their real colors. Nothing in the document itself changes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I print a document with dark mode on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Printing uses the document, not your screen, so it prints in its normal colors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work for Google Slides?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pagic's special handling is for Docs and Sheets. On Slides, regular dark mode applies, so check how your slides look before presenting."
+        }
+      }
+    ]
+  }
+]
+  </script>
+  <script src="/config.js" defer></script>
+  <script src="/theme.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Pagic home">
+      <img src="/assets/wordmark-p.webp" alt="" width="140" height="200">
+      <span>agic</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="button button-small" href="/#get">Get Pagic</a>
+    </nav>
+  </header>
+  <main class="post" id="main">
+    <article>
+      <nav class="post-crumbs" aria-label="Breadcrumb"><a href="/">Pagic</a> <span aria-hidden="true">›</span> <a href="/blog/">Blog</a></nav>
+      <h1>How to Get Dark Mode in Google Docs and Sheets (Desktop)</h1>
+      <p class="post-meta">By <a href="/about/" rel="author">Konstantin Suvorov</a>, who makes Pagic · <time datetime="2026-11-19">19 November 2026</time> · 3 min read</p>
+      <nav class="post-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#why-doesn-39-t-google-docs-have-dark-mode-on-desktop">Why doesn&#39;t Google Docs have dark mode on desktop?</a></li><li><a href="#why-most-dark-mode-tools-struggle-with-google-docs">Why most dark mode tools struggle with Google Docs</a></li><li><a href="#how-to-get-dark-mode-in-google-docs-with-pagic">How to get dark mode in Google Docs with Pagic</a></li><li><a href="#other-ways-to-get-a-dark-google-docs">Other ways to get a dark Google Docs</a></li><li><a href="#does-dark-mode-in-docs-change-what-other-people-see">Does dark mode in Docs change what other people see?</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li></ol></nav>
+      <div class="post-body">
+<p>To get dark mode in Google Docs on a computer, you need a browser extension, because the page you type on stays white even when Chrome and your system are dark. Google&#39;s mobile apps follow your phone&#39;s dark mode, but the web version doesn&#39;t. Pagic&#39;s dark mode handles Docs and Sheets specially: the paper goes dark, the text goes light, and pictures in the document keep their colors.</p>
+<h2 id="why-doesn-39-t-google-docs-have-dark-mode-on-desktop">Why doesn&#39;t Google Docs have dark mode on desktop?</h2>
+<p>On phones, the Google Docs app follows your system: turn on dark mode and the document goes dark. In a browser, Docs keeps its white page no matter what Chrome or your operating system is set to. The toolbar and menus around it may follow your theme, but the part you stare at for hours doesn&#39;t.</p>
+<h2 id="why-most-dark-mode-tools-struggle-with-google-docs">Why most dark mode tools struggle with Google Docs</h2>
+<p>Here&#39;s the technical bit, briefly. A normal website is made of text and boxes, and a dark mode tool can recolor them. Google Docs draws its pages more like pictures, and Google Sheets draws its cells the same way. A dark mode tool that leaves pictures alone leaves the page white. One that darkens everything turns the document into a photo negative, with images inverted too.</p>
+<p>Pagic&#39;s dark mode treats them as text instead of pictures: the paper goes dark and the words go light, and pictures drawn inside the document flip too so they don&#39;t end up as negatives.</p>
+<h2 id="how-to-get-dark-mode-in-google-docs-with-pagic">How to get dark mode in Google Docs with Pagic</h2>
+<ol>
+<li>Install Pagic and open a Google Doc.</li>
+<li>Click Pagic&#39;s icon and <strong>Customize this site</strong>. Chrome asks you to allow docs.google.com.</li>
+<li>Click the <strong>moon</strong>. The page goes dark.</li>
+<li>Click the moon again for <strong>Auto</strong>, if you want Docs dark only while your system is in dark mode.</li>
+<li>Drag <strong>Darkness</strong> below 100% if pure black is too harsh. It starts at 95%, a touch softer than black.</li>
+</ol>
+<p>Since Pagic saves per site, every Google Doc you open will be dark from now on, and Sheets too (it&#39;s the same docs.google.com site).</p>
+<h2 id="other-ways-to-get-a-dark-google-docs">Other ways to get a dark Google Docs</h2>
+<ul>
+<li><strong>Chrome&#39;s dark mode flag.</strong> In <code>chrome://flags</code>, <strong>Auto Dark Mode for Web Contents</strong> darkens every site, Docs included. It&#39;s free and built in, but it&#39;s for all sites at once and the results vary.</li>
+<li><strong>Dark Reader.</strong> It darkens Docs too, and many people use it. How well it handles the page depends on its current fixes for Google&#39;s layout.</li>
+<li><strong>A Docs-only extension.</strong> Several extensions on the Chrome Web Store do just this. Fine if Docs is the only site you need.</li>
+<li><strong>Page color in Docs.</strong> File → Page setup → Page color lets you set a dark page and change the text to white. It works, but it changes the document itself, so everyone you share it with, and every printout, gets the dark version too.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Chrome flag</th>
+<th>Dark Reader</th>
+<th>Page color in Docs</th>
+<th>Pagic</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Only on your screen</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No, it changes the file</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Per-site</td>
+<td>No</td>
+<td>Yes</td>
+<td>Per document</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Follows system dark/light</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes (Auto)</td>
+</tr>
+<tr>
+<td>Pictures keep their colors</td>
+<td>Varies</td>
+<td>Varies</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Free</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Free for one site</td>
+</tr>
+</tbody></table></div>
+<h2 id="does-dark-mode-in-docs-change-what-other-people-see">Does dark mode in Docs change what other people see?</h2>
+<p>Not with an extension. Pagic and the other tools change how the page looks in your browser only. The document, and everyone else&#39;s view of it, stays the same. The one method that does change it for everyone is Docs&#39; own Page color setting.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<p><strong>Is there an official Google Docs dark mode on desktop?</strong> Google&#39;s mobile apps follow your system&#39;s dark mode, but in a desktop browser the page you write on stays white. You need an extension or Chrome&#39;s dark mode flag.
+<strong>How do I make Google Sheets dark?</strong> The same way as Docs. With Pagic, dark mode on docs.google.com covers both Docs and Sheets.
+<strong>Will dark mode mess up the colors in my document?</strong> With Pagic, no. Text colors are adjusted for the dark page, and pictures keep their real colors. Nothing in the document itself changes.
+<strong>Can I print a document with dark mode on?</strong> Printing uses the document, not your screen, so it prints in its normal colors.
+<strong>Does it work for Google Slides?</strong> Pagic&#39;s special handling is for Docs and Sheets. On Slides, regular dark mode applies, so check how your slides look before presenting.</p>
+
+      </div>
+      <aside class="post-cta">
+  <img src="/assets/pagic.png" alt="" width="72" height="72" loading="lazy">
+  <div>
+    <p class="post-cta-title">A dark Google Docs, without the negative</p>
+    <p>Pagic's dark mode treats Docs and Sheets as text, so the paper goes dark and the words go light. Free for one site.</p>
+    <a class="button button-small" href="https://chromewebstore.google.com/detail/pagic/lmpmkmabloeammjcjelokphkmaelokdp?utm_source=pagic.dev&utm_medium=blog&utm_campaign=google-docs-dark-mode" data-umami-event="Install" data-umami-event-post="google-docs-dark-mode">Add Pagic to Chrome</a>
+  </div>
+</aside>
+      <footer class="post-author">
+        <img src="/assets/pagic.png" alt="" width="56" height="56" loading="lazy">
+        <p>I'm Konstantin, and I make Pagic on my own: a Chrome extension for hiding, recoloring and marking up any website. I write these guides from the problems I ran into while building it. Questions or corrections: <a href="mailto:support@pagic.dev">support@pagic.dev</a>.</p>
+      </footer>
+      <nav class="post-related" aria-label="More from the blog"><p>Keep reading</p><ul><li><a href="/blog/dark-mode-for-any-website/">How to Get Dark Mode on Any Website in Chrome</a></li><li><a href="/blog/how-to-customize-any-website/">How to Customize Any Website in Chrome (No Code)</a></li><li><a href="/blog/best-chrome-extensions-to-customize-websites/">8 Best Chrome Extensions to Customize Websites (2026)</a></li></ul></nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <span>© 2026 Pagic</span>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Purchase terms</a>
+    <a href="/support/">Support</a>
+  </footer>
+</body>
+</html>
